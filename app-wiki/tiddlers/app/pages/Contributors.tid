@@ -1,0 +1,19 @@
+title: Contributors
+
+<$list filter="[tag[$:/tags/Link]each[origin]get[origin]sort[]]" variable="origin">
+<h1><$text text=<<origin>>/></h1>
+<ul>
+<$list filter="[tag[$:/tags/Link]field:origin<origin>get[url]sort[]]" variable="url">
+<li>
+{{$:/_Components/Link}}
+<ul>
+<$list filter="[tag[$:/tags/Link]field:origin<origin>field:url<url>tags[]] -[[$:/tags/Link]] +[sort[]]" variable="tag">
+<li>
+<$text text=<<tag>>/>
+</li>
+</$list>
+</ul>
+</li>
+</$list>
+</ul>
+</$list>

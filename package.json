@@ -1,0 +1,15 @@
+{
+  "name": "tiddlywikilinks",
+  "version": "0.1.0",
+  "description": "Collecting TiddlyWiki Links",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "tiddlywiki": "github:Jermolene/TiddlyWiki5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/collect-links.js && npx tiddlywiki app-wiki --verbose --output dist --build index"
+  },
+  "author": "Jeremy Ruston",
+  "license": "MIT"
+}

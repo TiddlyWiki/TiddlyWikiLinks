@@ -1,0 +1,18 @@
+{
+	"description": "TiddlyWiki Links",
+	"plugins": [
+		"tiddlywiki/highlight"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite"
+	],
+	"languages": [
+	],
+	"build": {
+		"index": [
+			"--rendertiddler","$:/core/save/all","index.html","text/plain",
+			"--rendertiddler","$:/core/templates/alltiddlers.template.html","alltiddlers.html","text/plain",
+			"--rendertiddler","$:/core/templates/static.template.css","static/static.css","text/plain"]
+	}
+}

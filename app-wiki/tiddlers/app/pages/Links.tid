@@ -1,0 +1,19 @@
+title: Links
+
+<$list filter="[tag[$:/tags/Link]each[url]get[url]sort[]]" variable="url">
+<h1>{{$:/_Components/Link}}</h1>
+<ul>
+<$list filter="[tag[$:/tags/Link]field:url<url>tags[]] -[[$:/tags/Link]] +[sort[]]" variable="tag">
+<li>
+<$text text=<<tag>>/>
+<ul>
+<$list filter="[tag[$:/tags/Link]tag<tag>url<url>]" variable="link">
+<li>
+<$text text={{{ [<link>get[origin]] }}}/>
+</li>
+</$list>
+</ul>
+</li>
+</$list>
+</ul>
+</$list>

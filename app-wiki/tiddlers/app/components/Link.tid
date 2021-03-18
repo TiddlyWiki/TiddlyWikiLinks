@@ -1,0 +1,3 @@
+title: $:/_Components/Link
+
+<a href=<<url>> target="_blank" rel="noopener noreferrer"><$text text=<<url>>/></a>
