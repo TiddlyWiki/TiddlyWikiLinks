@@ -17,11 +17,11 @@ npm update
 
 ## Develop
 
-To run the app locally:
+To build the app locally:
 
 ```
-npm start
+npm build
 ```
 
-The output files will be in `app-wiki/output`.
+The output files will be in `/output`.
 
