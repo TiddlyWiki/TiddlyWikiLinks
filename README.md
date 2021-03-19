@@ -20,7 +20,7 @@ npm update
 To build the app locally:
 
 ```
-npm build
+npm run build
 ```
 
 The output files will be in `/output`.

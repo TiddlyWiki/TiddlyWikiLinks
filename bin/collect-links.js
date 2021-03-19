@@ -45,19 +45,21 @@ class App {
 			if(contents.error) {
 				errors.push({siteInfo: siteInfo, error: contents.error});
 			} else {
-				// Output a tiddler with information about the source
-				output.push({
+				// Collect a tiddler with information about the source
+				var sourceDescriptionTiddler = {
 					title: `$:/config/sites/${siteInfo.name}`,
 					name: siteInfo.name,
 					url: siteInfo.url,
-					text: siteInfo.description,
+					caption: "",
+					text: "",
 					tags: "$:/tags/LinkSource"
-				})
+				};
 				// Get the tiddlers from the site
 				var tiddlers = extractTiddlersFromWikiFile(contents.text);
-				// Collect tiddlers whose title looks like a URL
+				// Look at each tiddler
 				for(const fields of tiddlers) {
 					const tags = parseStringArray(fields.tags || "");
+					// Collect tiddlers with $:/tags/Link and an "url" field that looks like an http:// or https:// URL
 					if(tags.includes("$:/tags/Link") &&  fields.url && (fields.url.startsWith("https://") || fields.url.startsWith("http://"))) {
 						output.push({
 							title: `$:/config/links/${siteInfo.name}/${fields.title}`,
@@ -69,7 +71,26 @@ class App {
 							origin: siteInfo.name
 						})
 					}
+					// Collect favicons
+					if(fields.title === "$:/favicon.ico") {
+						output.push({
+							title: `$:/config/avatars/${siteInfo.name}`,
+							name: siteInfo.name,
+							tags: "$:/tags/Avatar",
+							text: fields.text,
+							type: fields.type
+						});
+					}
+					// Collect site title and subtitle
+					if(fields.title === "$:/SiteTitle") {
+						sourceDescriptionTiddler.caption = fields.text;
+					}
+					if(fields.title === "$:/SiteSubtitle") {
+						sourceDescriptionTiddler.text = fields.text;
+					}
 				}
+				// Output the source description tiddler
+				output.push(sourceDescriptionTiddler);
 			}
 		}
 		// Write the output tiddlers

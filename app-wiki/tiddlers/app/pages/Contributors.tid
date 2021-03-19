@@ -1,7 +1,11 @@
 title: Contributors
 
 <$list filter="[tag[$:/tags/Link]each[origin]get[origin]sort[]]" variable="origin">
-<h1><$text text=<<origin>>/></h1>
+<$set name="origin-title" value={{{ [tag[$:/tags/LinkSource]field:name<origin>] }}}>
+<h1>{{$:/_Components/Contributor}}</h1>
+<p>
+<$text text={{{ [<origin-title>get[text]] }}}/>
+</p>
 <ul>
 <$list filter="[tag[$:/tags/Link]field:origin<origin>get[url]sort[]]" variable="url">
 <li>
@@ -16,4 +20,5 @@ title: Contributors
 </li>
 </$list>
 </ul>
+</$set>
 </$list>

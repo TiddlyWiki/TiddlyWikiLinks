@@ -9,7 +9,9 @@ title: Topics
 <ul>
 <$list filter="[tag[$:/tags/Link]tag<tag>url<url>]" variable="link">
 <li>
-''<$text text={{{ [<link>get[origin]] }}}/>'': <$text text={{{ [<link>get[text]] }}}/>
+''<$set name="origin" value={{{ [<link>get[origin]] }}}>
+{{$:/_Components/Contributor}}
+</$set>'': <$text text={{{ [<link>get[text]] }}}/>
 </li>
 </$list>
 </ul>
