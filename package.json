@@ -9,7 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "node ./bin/collect-links.js && npx tiddlywiki app-wiki --verbose --output dist --build index"
+    "build": "npm run collect-links && npm run build-dist",
+    "collect-links": "node ./bin/collect-links.js",
+    "build-dist": "npx tiddlywiki app-wiki --verbose --output dist --build index"
   },
   "author": "Jeremy Ruston",
   "license": "MIT"
