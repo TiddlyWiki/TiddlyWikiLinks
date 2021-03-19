@@ -11,6 +11,7 @@ const fs = require("fs"),
 	writeFileAsync = promisify(fs.writeFile),
 	mkdirAsync = promisify(fs.mkdir),
 	fetch = require("node-fetch"),
+	normalizeUrl = require('normalize-url'),
 	{extractTiddlersFromWikiFile,parseStringArray,stringifyList} = require("./tiddlywiki-utils"),
 	{ArgParser} = require("./utils");
 
@@ -66,7 +67,7 @@ class App {
 							modified: fields.modified,
 							created: fields.created,
 							text: fields.text,
-							url: fields.url,
+							url: normalizeUrl(fields.url),
 							tags: stringifyList(tags),
 							origin: siteInfo.name
 						})
