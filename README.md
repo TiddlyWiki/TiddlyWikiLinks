@@ -1,4 +1,4 @@
-# TiddlyWink Links
+# TiddlyWiki Links
 
 
 ## Setup
