@@ -13,7 +13,7 @@ const fs = require("fs"),
 	fetch = require("node-fetch"),
 	normalizeUrl = require('normalize-url'),
 	{extractTiddlersFromWikiFile,parseStringArray,stringifyList} = require("./tiddlywiki-utils"),
-	{ArgParser} = require("./utils");
+	{ArgParser,hash} = require("./utils");
 
 class App {
 
@@ -62,12 +62,14 @@ class App {
 					const tags = parseStringArray(fields.tags || "");
 					// Collect tiddlers with $:/tags/Link and an "url" field that looks like an http:// or https:// URL
 					if(tags.includes("$:/tags/Link") &&  fields.url && (fields.url.startsWith("https://") || fields.url.startsWith("http://"))) {
+						const normalizedUrl = normalizeUrl(fields.url);
 						output.push({
 							title: `$:/config/links/${siteInfo.name}/${fields.title}`,
 							modified: fields.modified,
 							created: fields.created,
 							text: fields.text,
-							url: normalizeUrl(fields.url),
+							url: normalizedUrl,
+							"url-hash": hash(normalizedUrl),
 							tags: stringifyList(tags),
 							origin: siteInfo.name
 						})

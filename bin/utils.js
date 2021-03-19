@@ -34,3 +34,18 @@ exports.ArgParser = class ArgParser {
 		}
 	}
 };
+
+/*
+Hash a string
+*/
+const crypto = require("crypto");
+
+exports.hash  = function(text,length = 20) {
+	const hash = crypto.createHash("sha256");
+	hash.update(text);
+	const hashText = hash.digest("hex");
+	if(length === undefined) {
+		length = hashText.length;
+	}
+	return hashText.slice(0,length);
+}
