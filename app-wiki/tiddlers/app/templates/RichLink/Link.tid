@@ -12,7 +12,7 @@ Parameters:
 -->
 <div class="tc-richlink-link">
 <$vars url={{{ [<link-title>get[url]] }}}>
-<a href=<<url>> target="_blank" rel="noopener noreferrer" class="tc-richlink-link-target" title=<<url>>><$text text=<<url>>/></a>
-<a href={{{ [<link-title>get[url-hash]addprefix[urls/]addprefix<tv-path-to-root>] }}} class="tc-richlink-link-info" title="Show link info">{{$:/core/images/info-button}}</a>
+<a href={{{ [<link-title>get[url-hash]addprefix[urls/]addprefix<tv-path-to-root>] }}} class="tc-richlink-link-info" title="Show link info"><$text text=<<url>>/></a>
+<a href=<<url>> target="_blank" rel="noopener noreferrer" class="tc-richlink-link-target" title=<<url>>>{{$:/core/images/open-window}}</a>
 </$vars>
 </div>

@@ -6,7 +6,7 @@ tags: $:/tags/PageSection
 <a href={{{ [<tv-path-to-root>] }}}>
 [img width=150 [$:/_Images/JackInLinks.svg]]
 <span class="tc-section-branding-text">
-links.tiddlywiki.com
+~TiddlyWikiLinks
 </span>
 </a>
 </header>

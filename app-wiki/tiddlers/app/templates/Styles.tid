@@ -185,7 +185,7 @@ Page Layout
 */
 
 .tc-section-branding {
-    padding: 1em 1em 0 1em;
+    padding: 3em 1em 0 1em;
     background-color: <<colour base-primary>>;
 }
 
@@ -255,11 +255,11 @@ Rich links
     background-color: <<colour base-tertiary>>;    
 }
 
-.tc-richlink-link-info {
+.tc-richlink-link-target {
     vertical-align: middle;
 }
 
-.tc-richlink-link-info svg {
+.tc-richlink-link-target svg {
     width: 1em;
     height: 1em;
 }
