@@ -1,4 +1,5 @@
 title: $:/_Templates/Page/Page
+page-title: <$text text=<<currentTiddler>>/>
 
 <!--
 

@@ -1,4 +1,5 @@
 title: $:/_Templates/Page/Link
+page-title: <$text text={{!!url}}/>
 
 <!--
 

@@ -1,4 +1,5 @@
 title: $:/_Templates/Page/Contributor
+page-title: <$text text={{!!name}}/>'s Links
 
 <!--
 
