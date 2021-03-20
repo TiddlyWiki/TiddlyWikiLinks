@@ -10,4 +10,6 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
+<div class="tc-richlink-topic">
 <a href={{{ [<topic>slugify[]addprefix[topics/]addprefix<tv-path-to-root>] }}}><$text text=<<topic>>/></a>
+</div>

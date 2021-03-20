@@ -10,4 +10,4 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-<h1><$text text=<<topic>>/></h1>
+{{$:/_Templates/RichLink/Topic}}

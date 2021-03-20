@@ -2,6 +2,12 @@ title: $:/_Templates/Section/Footer
 tags: $:/tags/PageSection
 
 <footer class="tc-section-footer">
-links.tiddlywiki.com is also available in
-<a href={{{ [[./wiki.html]addprefix<tv-path-to-root>] }}}>~TiddlyWiki format</a>
+<p>
+[[links.tiddlywiki.com on GitHub|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks]]
+</p><p>
+Last update: <$text text={{{ [tag[$:/tags/Link]!sort[modified]get[modified]limit[1]format:date{$:/language/Tiddler/DateFormat}] }}}/>
+</p>
+<p>
+Also available in <a href={{{ [[./wiki.html]addprefix<tv-path-to-root>] }}}>~TiddlyWiki format</a>
+</p>
 </footer>

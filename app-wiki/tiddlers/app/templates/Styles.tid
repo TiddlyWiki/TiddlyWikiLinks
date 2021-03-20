@@ -181,16 +181,21 @@ table tfoot tr td {
 }
 
 /*
-Page Layout Styles
+Page Layout
 */
 
 .tc-section-branding {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
+    background-color: <<colour base-primary>>;
+}
+
+.tc-section-branding img {
+    vertical-align: text-bottom;
 }
 
 .tc-section-branding a {
     text-decoration: none;
-    color: <<colour base-secondary>>;
+    color: <<colour background>>;
 }
 
 .tc-section-branding-text {
@@ -199,7 +204,6 @@ Page Layout Styles
 }
 
 .tc-section-menu {
-    padding: 0 1em;
 }
 
 .tc-section-menu > ul {
@@ -233,4 +237,40 @@ Page Layout Styles
 .tc-section-footer {
     padding: 1em;
     color: <<colour background>>;
+}
+
+/*
+Rich links
+*/
+
+.tc-richlink-link {
+    
+}
+
+.tc-richlink-link-target {
+    text-decoration: none;    
+}
+
+.tc-richlink-link-target:hover {
+    background-color: <<colour base-tertiary>>;    
+}
+
+.tc-richlink-link-info {
+    vertical-align: middle;
+}
+
+.tc-richlink-link-info svg {
+    width: 1em;
+    height: 1em;
+}
+
+.tc-richlink-topic a {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    margin: 0.5em;
+    border-radius: 1em;
+    text-decoration: none;
+    background-color: <<colour base-secondary>>;
+    color: <<colour background>>;
+    font-weight: bold;
 }
