@@ -2,5 +2,5 @@ title: $:/_Templates/Section/Branding
 tags: $:/tags/PageSection
 
 <aside>
-<a href={{{ [<tv-path-root>addsuffix[/]] }}}>[img width=200 [$:/_Images/JackInLinks.svg]]</a>
+<a href={{{ [<tv-path-to-root>] }}}>[img width=200 [$:/_Images/JackInLinks.svg]]</a>
 </aside>

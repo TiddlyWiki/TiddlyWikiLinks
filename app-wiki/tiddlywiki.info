@@ -12,6 +12,7 @@
 	"build": {
 		"index": [
 			"--render","$:/core/save/all","wiki.html","text/plain",
+			"--save","$:/favicon.ico","favicon.ico",
 			"--render","$:/_Templates/Page/Index","index.html","text/plain","$:/_Templates/HTML",
 				"tv-page-content","$:/_Templates/Page/Index",
 			"--render","$:/core/templates/static.template.css","styles.css","text/plain","$:/core/templates/static.template.css",

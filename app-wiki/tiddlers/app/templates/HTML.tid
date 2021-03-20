@@ -13,7 +13,8 @@ title: $:/_Templates/HTML
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="../../styles.css">
+<link id="faviconLink" rel="shortcut icon" href="`<$text text=<<tv-path-to-root>>/>`favicon.ico">
+<link rel="stylesheet" href="`<$text text=<<tv-path-to-root>>/>`styles.css">
 <title>`<$view field="caption"><$view field="title"/></$view>: {{$:/core/wiki/title}}`</title>
 </head>
 <body class="tc-body">
