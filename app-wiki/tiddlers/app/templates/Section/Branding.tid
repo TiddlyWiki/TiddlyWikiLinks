@@ -1,6 +1,12 @@
 title: $:/_Templates/Section/Branding
 tags: $:/tags/PageSection
 
-<aside>
-<a href={{{ [<tv-path-to-root>] }}}>[img width=200 [$:/_Images/JackInLinks.svg]]</a>
-</aside>
+\whitespace trim
+<header class="tc-section-branding">
+<a href={{{ [<tv-path-to-root>] }}}>
+[img width=150 [$:/_Images/JackInLinks.svg]]
+<span class="tc-section-branding-text">
+links.tiddlywiki.com
+</span>
+</a>
+</header>

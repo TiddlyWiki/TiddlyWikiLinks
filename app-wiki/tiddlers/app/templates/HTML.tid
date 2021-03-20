@@ -18,7 +18,7 @@ title: $:/_Templates/HTML
 <title>`<$transclude tiddler=<<tv-page-content>> field="page-title"/>: {{$:/core/wiki/title}}`</title>
 </head>
 <body class="tc-body">
-`<$list filter="[tag[$:/tags/PageSection]]" variable="section"><$view tiddler=<<section>> format="htmlwikified"/></$list>`
+`<$list filter="[tag[$:/tags/PageSection]]" variable="section"><$view tiddler=<<section>> format="htmlwikified" mode="inline"/></$list>`
 </body>
 </html>
 `

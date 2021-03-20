@@ -1,6 +1,6 @@
 title: $:/_Templates/Section/Content
 tags: $:/tags/PageSection
 
-<section>
+<article class="tc-section-content">
 <$transclude tiddler=<<tv-page-content>> mode="block"/>
-</section>
+</article>

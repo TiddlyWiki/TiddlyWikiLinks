@@ -10,10 +10,10 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-Number of contributors: <$count filter="[tag[$:/tags/LinkSource]]"/>
+Number of <a href={{{ [[./pages/contributors]addprefix<tv-path-to-root>] }}}>contributors</a>: <$count filter="[tag[$:/tags/LinkSource]]"/>
 
-Number of links: <$count filter="[tag[$:/tags/Link]]"/>
+Number of <a href={{{ [[./pages/links]addprefix<tv-path-to-root>] }}}>links</a>: <$count filter="[tag[$:/tags/Link]]"/>
 
-Number of unique URLs: <$count filter="[tag[$:/tags/Link]each[url]]"/>
+Number of <a href={{{ [[./pages/links]addprefix<tv-path-to-root>] }}}>unique</a> URLs: <$count filter="[tag[$:/tags/Link]each[url]]"/>
 
-Number of topics: <$count filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]"/>
+Number of <a href={{{ [[./pages/topics]addprefix<tv-path-to-root>] }}}>topics</a>: <$count filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]"/>
