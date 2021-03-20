@@ -1,0 +1,7 @@
+title: $:/_Templates/Section/Footer
+tags: $:/tags/PageSection
+
+<aside>
+links.tiddlywiki.com is also available in
+<a href={{{ [[./wiki.html]addprefix<tv-path-to-root>] }}}>~TiddlyWiki format</a>
+</aside>

@@ -1,0 +1,17 @@
+title: $:/_Templates/Details/Contributor
+
+<!--
+
+Render the details of a particular contributor
+
+Parameters:
+
+    contributor: Name of the contributor
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<$vars currentTiddler={{{ [tag[$:/tags/LinkSource]name<contributor>] }}}>
+<h1><$text text={{!!caption}}/></h1>
+<a href={{!!url}} target="_blank" rel="noopener noreferrer"><$text text={{!!url}}/></a>
+<$transclude mode="inline"/>
+</$vars>

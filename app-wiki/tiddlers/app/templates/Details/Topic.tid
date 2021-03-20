@@ -1,0 +1,13 @@
+title: $:/_Templates/Details/Topic
+
+<!--
+
+Render the details of a particular Topic
+
+Parameters:
+
+    topic: Name of the topic
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<h1><$text text=<<topic>>/></h1>

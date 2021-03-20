@@ -1,0 +1,10 @@
+title: $:/_Templates/Section/Menu
+tags: $:/tags/PageSection
+
+<menu>
+<$list filter="[tag[$:/tags/Page]]" variable="page">
+<$list filter="[<page>!match<currentTiddler>]" variable="ignore" emptyMessage="<$text text=<<page>>/>">
+<a href={{{ [<page>slugify[]addprefix[./pages/]addprefix<tv-path-to-root>] }}}><$text text=<<page>>/></a>
+</$list>
+</$list>
+</menu>

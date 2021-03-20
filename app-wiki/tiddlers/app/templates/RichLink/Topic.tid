@@ -1,0 +1,13 @@
+title: $:/_Templates/RichLink/Topic
+
+<!--
+
+Render a rich link to the details page relating to a particular topic
+
+Parameters:
+
+    topic: Name of the topic
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<a href={{{ [<topic>slugify[]addprefix[topics/]addprefix<tv-path-to-root>] }}}><$text text=<<topic>>/></a>

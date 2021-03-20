@@ -11,8 +11,22 @@
 	],
 	"build": {
 		"index": [
-			"--rendertiddler","$:/core/save/all","index.html","text/plain",
-			"--rendertiddler","$:/core/templates/alltiddlers.template.html","alltiddlers.html","text/plain",
-			"--rendertiddler","$:/core/templates/static.template.css","static/static.css","text/plain"]
+			"--render","$:/core/save/all","wiki.html","text/plain",
+			"--render","$:/_Templates/Page/Index","index.html","text/plain","$:/_Templates/HTML",
+				"tv-page-content","$:/_Templates/Page/Index",
+			"--render","$:/core/templates/static.template.css","styles.css","text/plain","$:/core/templates/static.template.css",
+			"--render","[tag[$:/tags/Page]]","[slugify[]addprefix[pages/]addsuffix[/index.html]]","text/plain","$:/_Templates/HTML",
+				"tv-path-to-root","../../",
+				"tv-page-content","$:/_Templates/Page/Page",
+			"--render","[tag[$:/tags/LinkSource]]","[get[name]addprefix[contributors/]addsuffix[/index.html]]","text/plain","$:/_Templates/HTML",
+				"tv-path-to-root","../../",
+				"tv-page-content","$:/_Templates/Page/Contributor",
+			"--save","[tag[$:/tags/Avatar]]","[get[name]slugify[]addprefix[contributors/]addsuffix[/avatar.png]]",
+			"--render","[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]","[slugify[]addprefix[topics/]addsuffix[/index.html]]","text/plain","$:/_Templates/HTML",
+				"tv-path-to-root","../../",
+				"tv-page-content","$:/_Templates/Page/Topic",
+			"--render","[tag[$:/tags/Link]each[url-hash]]","[get[url-hash]addprefix[urls/]addsuffix[/index.html]]","text/plain","$:/_Templates/HTML",
+				"tv-path-to-root","../../",
+				"tv-page-content","$:/_Templates/Page/Link"]
 	}
 }

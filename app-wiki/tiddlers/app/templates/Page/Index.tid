@@ -1,0 +1,18 @@
+title: $:/_Templates/Page/Index
+
+<!--
+
+Render the index page
+
+Parameters:
+
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+Number of contributors: <$count filter="[tag[$:/tags/LinkSource]]"/>
+
+Number of links: <$count filter="[tag[$:/tags/Link]]"/>
+
+Number of unique URLs: <$count filter="[tag[$:/tags/Link]each[url]]"/>
+
+Number of topics: <$count filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]"/>

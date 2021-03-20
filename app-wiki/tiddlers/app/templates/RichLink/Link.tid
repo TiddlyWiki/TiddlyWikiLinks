@@ -1,0 +1,14 @@
+title: $:/_Templates/RichLink/Link
+
+<!--
+
+Render a rich link to the details page relating to a particular link
+
+Parameters:
+
+    link-title: Title of a $:/tags/Link tiddler with the target URL
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<a href={{{ [<link-title>get[url]] }}} target="_blank" rel="noopener noreferrer"><$text text={{{ [<link-title>get[url]] }}}/></a>
+<a href={{{ [<link-title>get[url-hash]addprefix[urls/]addprefix<tv-path-to-root>] }}}>{{$:/core/images/info-button}}</a>

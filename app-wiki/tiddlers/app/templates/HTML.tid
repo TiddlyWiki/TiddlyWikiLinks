@@ -1,0 +1,23 @@
+title: $:/_Templates/HTML
+
+\define tv-wikilink-template() $uri_doubleencoded$.html
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+`<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="`{{$:/core/templates/version}}`" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../styles.css">
+<title>`<$view field="caption"><$view field="title"/></$view>: {{$:/core/wiki/title}}`</title>
+</head>
+<body class="tc-body">
+`<$list filter="[tag[$:/tags/PageSection]]" variable="section"><$view tiddler=<<section>> format="htmlwikified"/></$list>`
+</body>
+</html>
+`

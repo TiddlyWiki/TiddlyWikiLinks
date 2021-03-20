@@ -1,0 +1,13 @@
+title: $:/_Templates/Page/Page
+
+<!--
+
+Render the details page for a top level page
+
+Parameters:
+
+    currentTiddler: Title of the top level page
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<$transclude mode="block"/>

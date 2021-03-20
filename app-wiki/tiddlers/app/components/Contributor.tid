@@ -1,3 +1,0 @@
-title: $:/_Components/Contributor
-
-<$image source={{{ [<origin>addprefix[$:/config/avatars/]] }}} width=32px height=32px/> <$text text=<<origin>>/>

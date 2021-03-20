@@ -9,9 +9,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "npm run collect-links && npm run build-dist",
+    "start": "npm run build && npm run serve",
+    "build": "npm run clean-output && npm run collect-links && npm run build-dist",
+    "build-serve": "npm run build-dist && npm run serve",
+    "clean-output": "./bin/clean.sh",
     "collect-links": "node ./bin/collect-links.js",
-    "build-dist": "npx tiddlywiki app-wiki --verbose --output dist --build index"
+    "build-dist": "npx tiddlywiki app-wiki --verbose --output dist --build index",
+    "serve": "npx http-server ./dist"
   },
   "author": "Jeremy Ruston",
   "license": "MIT"

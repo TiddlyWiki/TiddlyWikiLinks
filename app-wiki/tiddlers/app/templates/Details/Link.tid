@@ -1,0 +1,17 @@
+title: $:/_Templates/Details/Link
+
+<!--
+
+Render the details of a particular URL
+
+Parameters:
+
+    link-title: Title of a $:/tags/Link tiddler with the target URL
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<$vars url={{{ [<link-title>get[url]] }}}>
+<h1><a href=<<url>> target="_blank" rel="noopener noreferrer"><$text text=<<url>>/></a></h1>
+
+Count: <$count filter="[tag[$:/tags/Link]url<url>]"/>
+</$vars>
