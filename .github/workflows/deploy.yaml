@@ -17,6 +17,8 @@ jobs:
           persist-credentials: false 
       - name: Install dependencies
         run: npm install
+      - name: Run Tests
+        run: npm test
       - name: Build Site
         run: npm run build
       - name: Deploy Content

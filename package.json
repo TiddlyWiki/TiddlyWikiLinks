@@ -15,7 +15,8 @@
     "clean-output": "./bin/clean.sh",
     "collect-links": "node ./bin/collect-links.js",
     "build-dist": "npx tiddlywiki app-wiki --verbose --output dist --build index",
-    "serve": "npx http-server ./dist"
+    "serve": "npx http-server ./dist",
+    "test": "node bin/test.js"
   },
   "author": "Jeremy Ruston",
   "license": "MIT"
