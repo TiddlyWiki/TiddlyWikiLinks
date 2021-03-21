@@ -8,7 +8,6 @@ on:
       - "*"
   schedule:
     - cron:  '*/17 * * * *'
-	
 
 jobs:
   build-and-deploy:
