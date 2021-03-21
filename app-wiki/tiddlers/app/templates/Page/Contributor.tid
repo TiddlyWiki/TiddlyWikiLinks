@@ -13,18 +13,4 @@ Parameters:
 -->
 <$vars contributor={{!!name}}>
 {{$:/_Templates/Details/Contributor}}
-<ul>
-<$list filter="[tag[$:/tags/Link]field:origin<contributor>sort[url]]" variable="link-title">
-<li>
-{{$:/_Templates/RichLink/Link}}
-<ul>
-<$list filter="[<link-title>tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
-<li>
-{{$:/_Templates/RichLink/Topic}}
-</li>
-</$list>
-</ul>
-</li>
-</$list>
-</ul>
 </$vars>

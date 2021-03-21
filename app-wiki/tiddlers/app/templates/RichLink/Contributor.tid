@@ -10,8 +10,9 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-<div class="tc-richlink-contributor">
+<div class="tc-richlink tc-richlink-contributor">
 <a href={{{ [<contributor>addprefix[contributors/]addprefix<tv-path-to-root>] }}}>
-<$image source={{{ [<contributor>addprefix[$:/config/avatars/]] }}} width=32px height=32px/> <$text text=<<contributor>>/>
+<$image source={{{ [<contributor>addprefix[$:/config/avatars/]] }}} width=32px height=32px/>
+<span class="tc-richlink-contributor-name"><$text text=<<contributor>>/></span>
 </a>
 </div>

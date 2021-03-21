@@ -1,5 +1,6 @@
 title: $:/_Templates/RichLink/Topic
 
+\whitespace trim
 <!--
 
 Render a rich link to the details page relating to a particular topic
@@ -7,9 +8,17 @@ Render a rich link to the details page relating to a particular topic
 Parameters:
 
     topic: Name of the topic
+    count: optional count to be displayed
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-<div class="tc-richlink-topic">
-<a href={{{ [<topic>slugify[]addprefix[topics/]addprefix<tv-path-to-root>] }}}><$text text=<<topic>>/></a>
+<div class="tc-richlink tc-richlink-topic">
+<a href={{{ [<topic>slugify[]addprefix[topics/]addprefix<tv-path-to-root>] }}}>
+<$text text=<<topic>>/>
+<$list filter="[<count>!match[]]" variable="none">
+<$text text=" ("/>
+<$text text=<<count>>/>
+<$text text=")"/>
+</$list>
+</a>
 </div>

@@ -1,0 +1,39 @@
+title: $:/_Templates/Components/LinkPanel
+
+<!--
+
+Render the details of a particular link
+
+Parameters:
+
+    link-title: Title of a $:/tags/Link tiddler
+    tv-linkpanel-show-contributor: yes/no
+    tv-linkpanel-show-url: yes/no
+    tv-path-to-root: Optional relative path to get to the root of the site
+
+-->
+<div class="tc-link-panel">
+<$vars contributor={{{ [<link-title>get[origin]] }}}>
+<div class="tc-link-panel-heading">
+<$list filter="[<tv-linkpanel-show-contributor>match[yes]]" variable="ignore">
+{{$:/_Templates/RichLink/Contributor}}
+</$list>
+<$list filter="[<tv-linkpanel-show-url>match[yes]]" variable="ignore">
+{{$:/_Templates/RichLink/Link}}
+</$list>
+<span  class="tc-link-panel-subheading">
+on <$view tiddler=<<link-title>> field="modified" format="date" template={{$:/language/Tiddler/DateFormat}}/>
+</span>
+</div>
+<div class="tc-link-panel-body">
+<ul class="tc-list-horizontal">
+<$list filter="[<link-title>tags[]] -[[$:/tags/Link]] +[sortsub[]]" variable="topic">
+<li>
+{{$:/_Templates/RichLink/Topic}}
+</li>
+</$list>
+</ul>
+<$transclude tiddler=<<link-title>> mode="inline"/>
+</div>
+</$vars>
+</div>

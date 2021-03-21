@@ -11,7 +11,32 @@ Parameters:
 
 -->
 <$vars url={{{ [<link-title>get[url]] }}}>
-<h1><a href=<<url>> target="_blank" rel="noopener noreferrer"><$text text=<<url>>/></a></h1>
 
-Count: <$count filter="[tag[$:/tags/Link]url<url>]"/>
+<h1>{{$:/_Templates/RichLink/Link}}</h1>
+
+Bookmarked under these topics:
+
+<ul class="tc-list-horizontal">
+<$vars sortFilter="[all[tiddlers+shadows]tag[$:/tags/Link]field:url<url>tag<currentTiddler>count[]]">
+<$list filter="[tag[$:/tags/Link]field:url<url>tags[]] -[[$:/tags/Link]] +[!sortsub:number<sortFilter>]" variable="topic">
+<li>
+<$vars count={{{ [tag[$:/tags/Link]field:url<url>tag<topic>count[]] }}}>
+{{$:/_Templates/RichLink/Topic}}
+</$vars>
+</li>
+</$list>
+</$vars>
+</ul>
+
+Bookmarked by <$count filter="[tag[$:/tags/Link]url<url>]"/> contributor(s):
+
+<ul class="tc-list-vertical">
+<$list filter="[tag[$:/tags/Link]field:url<url>!sort[created]]" variable="link-title">
+<li>
+<$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="no">
+{{$:/_Templates/Components/LinkPanel}}
+</$vars>
+</li>
+</$list>
+</ul>
 </$vars>

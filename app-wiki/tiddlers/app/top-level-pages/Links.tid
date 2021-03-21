@@ -1,24 +1,10 @@
 title: Links
 tags: $:/tags/Page
 
+<ul class="tc-list-vertical">
 <$list filter="[tag[$:/tags/Link]each[url]sort[url]]" variable="link-title">
 <$set name="url" value={{{ [<link-title>get[url]] }}}>
-<h1>{{$:/_Templates/RichLink/Link}}</h1>
-<ul>
-<$list filter="[tag[$:/tags/Link]field:url<url>tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
-<li>
-{{$:/_Templates/RichLink/Topic}}
-<ul>
-<$list filter="[tag[$:/tags/Link]tag<topic>url<url>sort[origin]]" variable="link-title">
-<li>
-<$vars contributor={{{ [<link-title>get[origin]] }}}>
-{{$:/_Templates/RichLink/Contributor}}: <$transclude tiddler=<<link-title>> mode="inline"/>
-</$vars>
-</li>
-</$list>
-</ul>
-</li>
-</$list>
-</ul>
+<li>{{$:/_Templates/RichLink/Link}}</li>
 </$set>
 </$list>
+</ul>

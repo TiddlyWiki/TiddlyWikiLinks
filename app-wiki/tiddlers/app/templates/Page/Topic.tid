@@ -13,20 +13,4 @@ Parameters:
 -->
 <$vars topic=<<currentTiddler>>>
 {{$:/_Templates/Details/Topic}}
-<ul>
-<$list filter="[tag[$:/tags/Link]tag<topic>each[url]sort[url]]" variable="link-title">
-<$set name="url" value={{{ [<link-title>get[url]] }}}>
-<li>
-{{$:/_Templates/RichLink/Link}}
-<ul>
-<$list filter="[tag[$:/tags/Link]tag<topic>url<url>]" variable="link">
-<li>
-''<$vars contributor={{{ [<link>get[origin]] }}}><$transclude tiddler="$:/_Templates/RichLink/Contributor"/></$vars>'': <$transclude tiddler=<<link>> mode="inline"/>
-</li>
-</$list>
-</ul>
-</li>
-</$set>
-</$list>
-</ul>
 </$vars>

@@ -14,21 +14,5 @@ Parameters:
 <$vars link-title=<<currentTiddler>>>
 <$vars url={{{ [<link-title>get[url]] }}}>
 {{$:/_Templates/Details/Link}}
-<ul>
-<$list filter="[tag[$:/tags/Link]field:url<url>tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
-<li>
-{{$:/_Templates/RichLink/Topic}}
-<ul>
-<$list filter="[tag[$:/tags/Link]tag<topic>url<url>sort[origin]]" variable="link-title">
-<li>
-<$vars contributor={{{ [<link-title>get[origin]] }}}>
-{{$:/_Templates/RichLink/Contributor}}: <$transclude tiddler=<<link-title>> mode="inline"/>
-</$vars>
-</li>
-</$list>
-</ul>
-</li>
-</$list>
-</ul>
 </$vars>
 </$vars>

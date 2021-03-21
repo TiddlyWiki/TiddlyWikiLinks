@@ -1,5 +1,38 @@
 title: About
 tags: $:/tags/Page
 
-* $:/SiteTitle and $:/SiteSubtitle must be plain text
-* It is acceptable to post links to your own stuff
+!! How This Site Works
+
+This site aggregates links curated by individual members of the ~TiddlyWiki community. It lets you see the latest links, and explore them through categories and timelines.
+
+This site works best with a crowd of people posting links. The pressure on individuals is reduced because not everybody needs to catch every interesting link that flies past. The aggregation effects reduce the impact of mistakes. For example, if one person mis-tags a link under an inappropriate topic, the site will show that only one person added that tag, versus the majority using more appropriate tags. In that way, we hope that a sort of wisdom of the crowds will emerge, with consensus emerging as to the most useful ways to describe and categorise links.
+
+!! How To Contribute
+
+We invite you to become a contributing editor for ~TiddlyWikiLinks.
+
+The technical requirement is that you must maintain a publicly accessible ~TiddlyWiki containing the links. The URL of your site must be registered in the [[sites.json|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks/blob/main/sites/sites.json]] file in the ~GitHub repository. You can go ahead and add yourself if you know how to send a ~GitHub pull request, or you can post a message to the forum asking for somebody else to create the PR on your behalf. The information needed in [[sites.json|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks/blob/main/sites/sites.json]] is:
+
+* Your username
+* The URL of your site
+
+The links must be stored as individual tiddlers tagged `$:/tags/Link` with the following fields:
+
+* ''created'' -- the timestamp the link was created
+* ''modified'' -- the timestamp the link was updated
+* ''tags'' -- the tag `$:/tags/Link` plus any other tags to describe the link
+* ''text'' -- a brief comment describing the link that may only use inline formatting
+* ''title'' -- ignored by the system
+* ''url'' -- the URL of the link
+
+Your wiki should also have the following system tiddlers:
+
+* ''~$:/favicon.ico'' -- small square image used as your avator
+* ''~$:/SiteTitle'' -- a brief description of your links collection (must be plain text)
+* ''~$:/SiteSubtitle'' -- a longer description of your links collection (must be plain text)
+
+!! Code of Conduct
+
+* Do not use this platform to criticize or harass other people
+* Do not post links to offensive or illegal content
+* It is perfectly acceptable to post links to your own material, but please make it clear that that is the case

@@ -1,25 +1,10 @@
 title: Contributors
 tags: $:/tags/Page
 
+<ul class="tc-list-vertical">
 <$list filter="[tag[$:/tags/Link]each[origin]get[origin]sort[]]" variable="contributor">
 <$set name="source" value={{{ [tag[$:/tags/LinkSource]field:name<contributor>] }}}>
-<h1>{{$:/_Templates/RichLink/Contributor}}</h1>
-<p>
-<$text text={{{ [<source>get[text]] }}}/>
-</p>
-<ul>
-<$list filter="[tag[$:/tags/Link]field:origin<contributor>sort[url]]" variable="link-title">
-<li>
-{{$:/_Templates/RichLink/Link}}
-<ul>
-<$list filter="[<link-title>tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
-<li>
-{{$:/_Templates/RichLink/Topic}}
-</li>
-</$list>
-</ul>
-</li>
-</$list>
-</ul>
+<li>{{$:/_Templates/RichLink/Contributor}}</li>
 </$set>
 </$list>
+</ul>

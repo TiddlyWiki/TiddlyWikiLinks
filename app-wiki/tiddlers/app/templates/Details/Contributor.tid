@@ -11,7 +11,21 @@ Parameters:
 
 -->
 <$vars currentTiddler={{{ [tag[$:/tags/LinkSource]name<contributor>] }}}>
-<h1><$text text={{!!caption}}/></h1>
-<a href={{!!url}} target="_blank" rel="noopener noreferrer"><$text text={{!!url}}/></a>
+<h1>{{$:/_Templates/RichLink/Contributor}}</h1>
+<p>
+Link source: <a href={{!!url}} target="_blank" rel="noopener noreferrer"><$text text={{!!url}}/></a>
+</p>
+<p>
 <$transclude mode="inline"/>
+</p>
+
+<ul class="tc-list-vertical">
+<$list filter="[tag[$:/tags/Link]field:origin<contributor>!sort[modified]]" variable="link-title">
+<li>
+<$vars tv-linkpanel-show-contributor="no" tv-linkpanel-show-url="yes">
+{{$:/_Templates/Components/LinkPanel}}
+</$vars>
+</li>
+</$list>
+</ul>
 </$vars>

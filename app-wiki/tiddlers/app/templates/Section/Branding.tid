@@ -4,7 +4,7 @@ tags: $:/tags/PageSection
 \whitespace trim
 <header class="tc-section-branding">
 <a href={{{ [<tv-path-to-root>] }}}>
-[img width=150 [$:/_Images/JackInLinks.svg]]
+[img width=95 [$:/_Images/JackInLinks.svg]]
 <span class="tc-section-branding-text">
 ~TiddlyWikiLinks
 </span>

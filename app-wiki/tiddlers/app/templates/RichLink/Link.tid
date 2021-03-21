@@ -10,7 +10,7 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-<div class="tc-richlink-link">
+<div class="tc-richlink tc-richlink-link">
 <$vars url={{{ [<link-title>get[url]] }}}>
 <a href={{{ [<link-title>get[url-hash]addprefix[urls/]addprefix<tv-path-to-root>] }}} class="tc-richlink-link-info" title="Show link info"><$text text=<<url>>/></a>
 <a href=<<url>> target="_blank" rel="noopener noreferrer" class="tc-richlink-link-target" title=<<url>>>{{$:/core/images/open-window}}</a>

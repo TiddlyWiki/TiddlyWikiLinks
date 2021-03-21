@@ -10,4 +10,25 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-{{$:/_Templates/RichLink/Topic}}
+<h1>{{$:/_Templates/RichLink/Topic}}</h1>
+
+Links in this topic:
+
+<ul class="tc-list-vertical">
+<$list filter="[tag[$:/tags/Link]tag<topic>each[url]sort[url]]" variable="link-title">
+<$set name="url" value={{{ [<link-title>get[url]] }}}>
+<li>
+<h2>{{$:/_Templates/RichLink/Link}}</h2>
+<ul class="tc-list-vertical">
+<$list filter="[tag[$:/tags/Link]tag<topic>url<url>!sort[modified]]" variable="link-title">
+<li>
+<$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="no">
+{{$:/_Templates/Components/LinkPanel}}
+</$vars>
+</li>
+</$list>
+</ul>
+</li>
+</$set>
+</$list>
+</ul>
