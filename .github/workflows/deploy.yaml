@@ -6,6 +6,9 @@ on:
       - main
     tags:
       - "*"
+  schedule:
+    - cron:  '*/17 * * * *'
+	
 
 jobs:
   build-and-deploy:
