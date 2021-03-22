@@ -31,8 +31,16 @@ Your wiki should also have the following system tiddlers:
 * ''~$:/SiteTitle'' -- a brief description of your links collection (must be plain text)
 * ''~$:/SiteSubtitle'' -- a longer description of your links collection (must be plain text)
 
+!! Guidelines
+
+* Your bookmarking wiki can be hosted anywhere on the web
+* The criteria for inclusion has some flexibility, but at a minimum the links should be of general interest to the ~TiddlyWiki community
+* This is not a personal bookmarking site. Contributing editors should think of themselves as part of a chorus of voices making up the material we publish on tiddlywiki.com
+* The system will ignore any other tiddlers in the wiki, but it is impolite to have too much extraneous material since the system must fetch the entire wiki at regular intervals
+* It is acceptable to post links to your own material, but please make it clear that that is the case
+
 !! Code of Conduct
 
+* Try to make people feel good
 * Do not use this platform to criticize or harass other people
 * Do not post links to offensive or illegal content
-* It is perfectly acceptable to post links to your own material, but please make it clear that that is the case
