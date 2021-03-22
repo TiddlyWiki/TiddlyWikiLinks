@@ -303,7 +303,7 @@ tc-richlink-contributor-name {
     vertical-align: middle;
 }
 
-.tc-richlink-link-target svg {
+.tc-richlink a svg {
     width: 1em;
     height: 1em;
 }

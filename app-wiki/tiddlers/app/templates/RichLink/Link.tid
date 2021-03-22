@@ -1,5 +1,10 @@
 title: $:/_Templates/RichLink/Link
 
+\define download-link-template()
+title: $(url)$
+tags: $:/tags/Link
+url: $(url)$
+\end
 <!--
 
 Render a rich link to the details page relating to a particular link
@@ -14,5 +19,6 @@ Parameters:
 <$vars url={{{ [<link-title>get[url]] }}}>
 <a href={{{ [<link-title>get[url-hash]addprefix[urls/]addprefix<tv-path-to-root>] }}} class="tc-richlink-link-info" title="Show link info"><$text text=<<url>>/></a>
 <a href=<<url>> target="_blank" rel="noopener noreferrer" class="tc-richlink-link-target" title=<<url>>>{{$:/core/images/open-window}}</a>
+<a href={{{ [<download-link-template>encodeuricomponent[]addprefix[data:text/plain,]] }}} download={{{ [<link-title>get[url-hash]addprefix[link-]addsuffix[.tid]] }}} class="tc-richlink-link-download" title="Download this link as a tiddler to add to your own TiddlyWiki">{{$:/core/images/download-button}}</a>
 </$vars>
 </div>
