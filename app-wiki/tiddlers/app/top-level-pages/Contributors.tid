@@ -3,8 +3,6 @@ tags: $:/tags/Page
 
 <ul class="tc-list-vertical">
 <$list filter="[tag[$:/tags/Link]each[origin]get[origin]sort[]]" variable="contributor">
-<$set name="source" value={{{ [tag[$:/tags/LinkSource]field:name<contributor>] }}}>
-<li>{{$:/_Templates/RichLink/Contributor}}</li>
-</$set>
+<li>{{$:/_Templates/RichLink/Contributor}} (<$count filter="[tag[$:/tags/Link]origin<contributor>]"/> links)</li>
 </$list>
 </ul>

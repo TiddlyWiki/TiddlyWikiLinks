@@ -328,6 +328,13 @@ tc-richlink-contributor-name {
 Details
 */
 
+.tc-contributor-info {
+    border: 1px solid <<colour base-primary>>;
+    border-radius: 0.25em;
+    background-color: #fff8f8;
+    padding: 1em;
+}
+
 .tc-list-horizontal {
     list-style: none;
     padding: 0;

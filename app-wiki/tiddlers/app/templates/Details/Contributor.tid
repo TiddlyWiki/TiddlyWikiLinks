@@ -13,12 +13,11 @@ Parameters:
 <$vars currentTiddler={{{ [tag[$:/tags/LinkSource]name<contributor>] }}}>
 <h1>{{$:/_Templates/RichLink/Contributor}}</h1>
 <p>
-Link source: <a href={{!!url}} target="_blank" rel="noopener noreferrer"><$text text={{!!url}}/></a>
+Publishing <$count filter="[tag[$:/tags/Link]origin<contributor>]"/> links from: <a href={{!!url}} target="_blank" rel="noopener noreferrer"><$text text={{!!url}}/></a>
 </p>
-<p>
+<p class="tc-contributor-info">
 <$transclude mode="inline"/>
 </p>
-
 <ul class="tc-list-vertical">
 <$list filter="[tag[$:/tags/Link]field:origin<contributor>!sort[modified]]" variable="link-title">
 <li>
