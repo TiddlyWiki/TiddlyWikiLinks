@@ -70,7 +70,7 @@ class App {
 							text: fields.text,
 							url: normalizedUrl,
 							"url-hash": hash(normalizedUrl),
-							tags: stringifyList(tags),
+							tags: stringifyList(tags.filter(tag => tag === "$:/tags/Link" || !tag.startsWith("$:/"))),
 							origin: siteInfo.name
 						})
 					}

@@ -20,7 +20,7 @@ The links must be stored as individual tiddlers tagged `$:/tags/Link` with the f
 
 * ''created'' -- the timestamp the link was created
 * ''modified'' -- the timestamp the link was updated
-* ''tags'' -- the tag `$:/tags/Link` plus any other tags to describe the link
+* ''tags'' -- the tag `$:/tags/Link` plus any other tags to describe the link (other system tags starting `$:/` are ignored)
 * ''text'' -- a brief comment describing the link that may only use inline formatting
 * ''title'' -- ignored by the system
 * ''url'' -- the URL of the link
