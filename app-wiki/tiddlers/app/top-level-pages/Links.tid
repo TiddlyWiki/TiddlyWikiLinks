@@ -4,7 +4,7 @@ tags: $:/tags/Page
 <ul class="tc-list-vertical">
 <$list filter="[tag[$:/tags/Link]each[url]sort[url]]" variable="link-title">
 <$set name="url" value={{{ [<link-title>get[url]] }}}>
-<li>{{$:/_Templates/RichLink/Link}}</li>
+<li>{{$:/_Templates/RichLink/Link}} (<$count filter="[tag[$:/tags/Link]field:url<url>]"/> links)</li>
 </$set>
 </$list>
 </ul>
