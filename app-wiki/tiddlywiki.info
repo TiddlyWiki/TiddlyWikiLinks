@@ -13,6 +13,9 @@
 		"index": [
 			"--render","$:/core/save/all","wiki.html","text/plain",
 			"--save","$:/favicon.ico","favicon.ico",
+			"--save","$:/_Scripts/app.js","app.js",
+			"--render","$:/core/templates/exporters/JsonFile","tiddlers.json","text/plain","$:/core/templates/exporters/JsonFile",
+				"exportFilter","[tag[$:/tags/Link]] [tag[$:/tags/Avatar]] [tag[$:/tags/LinkSource]]",
 			"--render","$:/_Templates/Page/Index","index.html","text/plain","$:/_Templates/HTML",
 				"tv-page-content","$:/_Templates/Page/Index",
 			"--render","$:/_Styles","styles.css","text/plain","$:/_Styles",

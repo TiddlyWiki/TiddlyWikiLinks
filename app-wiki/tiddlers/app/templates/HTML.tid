@@ -22,5 +22,6 @@ title: $:/_Templates/HTML
 `<$list filter="[tag[$:/tags/PageSection]]" variable="section"><$view tiddler=<<section>> format="htmlwikified" mode="inline"/></$list>`
 </div>
 </body>
+<script src="`<$text text=<<tv-path-to-root>>/>`app.js"></script>
 </html>
 `
