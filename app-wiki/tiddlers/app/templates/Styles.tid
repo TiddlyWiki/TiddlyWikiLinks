@@ -340,6 +340,9 @@ Details
 .tc-list-vertical {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .tc-list-vertical > li {
