@@ -3,7 +3,7 @@ tags: $:/tags/Page
 
 Number of <a href={{{ [[./pages/topics]addprefix<tv-path-to-root>] }}}>topics</a>: <$count filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]"/>
 
-<ul class="tc-list-vertical">
+<ul class="tc-list-topics">
 <$list filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
 <li>{{$:/_Templates/RichLink/Topic}}</li>
 </$list>

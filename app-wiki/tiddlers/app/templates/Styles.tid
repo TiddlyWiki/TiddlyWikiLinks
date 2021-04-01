@@ -337,6 +337,8 @@ Details
     display: inline;
 }
 
+.tc-list-contributors,
+.tc-list-topics,
 .tc-list-vertical {
     list-style: none;
     padding: 0;
@@ -345,6 +347,17 @@ Details
 .tc-list-vertical > li {
     margin: 1em 0;
 }
+
+.tc-list-topics {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.tc-list-contributors {
+/* TODO */
+}
+
 
 .tc-link-panel {
     border: 1px solid <<colour muted-foreground>>;
