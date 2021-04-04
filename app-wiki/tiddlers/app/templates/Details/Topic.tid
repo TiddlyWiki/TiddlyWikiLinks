@@ -10,7 +10,7 @@ Parameters:
     tv-path-to-root: Optional relative path to get to the root of the site
 
 -->
-<h1>{{$:/_Templates/RichLink/Topic}}</h1>
+<h1><$vars count={{{ [tag[$:/tags/Link]tag<topic>count[]] }}}>{{$:/_Templates/RichLink/Topic}}</$vars></h1>
 
 Links in this topic:
 

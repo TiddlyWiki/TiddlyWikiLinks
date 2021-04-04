@@ -16,9 +16,9 @@ Parameters:
 <a href={{{ [<topic>slugify[]addprefix[topics/]addprefix<tv-path-to-root>] }}}>
 <$text text=<<topic>>/>
 <$list filter="[<count>!match[]]" variable="none">
-<$text text=" ("/>
+<span class="tc-richlink-topic-count">
 <$text text=<<count>>/>
-<$text text=")"/>
+</span>
 </$list>
 </a>
 </div>

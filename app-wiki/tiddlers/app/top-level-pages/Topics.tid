@@ -5,6 +5,10 @@ Number of <a href={{{ [[./pages/topics]addprefix<tv-path-to-root>] }}}>topics</a
 
 <ul class="tc-list-horizontal">
 <$list filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
-<li>{{$:/_Templates/RichLink/Topic}}</li>
+<li>
+<$vars count={{{ [tag[$:/tags/Link]tag<topic>count[]] }}}>
+{{$:/_Templates/RichLink/Topic}}
+</$vars>
+</li>
 </$list>
 </ul>
