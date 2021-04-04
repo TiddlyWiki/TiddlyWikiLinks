@@ -317,14 +317,20 @@ tc-richlink-contributor-name {
 	font-weight: bold;
 }
 
+.tc-richlink-topic a .tc-richlink-topic-name {
+    vertical-align: bottom;
+}
+
+
 .tc-richlink-topic a .tc-richlink-topic-count {
 	display: inline-block;
 	font-size: 0.8em;
-	padding: 0 0.25em;
+    padding: 0 0.25em;
 	border-radius: 1em;
 	background: <<color background>>;
 	color: <<colour base-secondary>>;
 	margin: 0 0.25em 0 0.5em;
+	vertical-align: text-bottom;
 }
 
 /*
