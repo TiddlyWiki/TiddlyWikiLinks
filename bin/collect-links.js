@@ -57,6 +57,9 @@ class App {
 				};
 				// Get the tiddlers from the site
 				var tiddlers = extractTiddlersFromWikiFile(contents.text);
+				if(!tiddlers) {
+					console.log("Failed to extract tiddlers from",contents.text.slice(0,1000));
+				}
 				// Look at each tiddler
 				for(const fields of tiddlers) {
 					const tags = parseStringArray(fields.tags || "");
@@ -99,6 +102,10 @@ class App {
 		// Write the output tiddlers
 		await mkdirAsync(path.dirname(outputTiddlersPath),{recursive: true});
 		await writeFileAsync(outputTiddlersPath,JSON.stringify(output,null,4),"utf8");
+		// Output any errors
+		if(errors.length > 0) {
+			console.log("Errors",errors);
+		}
 	}
 
 	async getFileContents(url) {
