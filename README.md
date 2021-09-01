@@ -20,7 +20,7 @@ npm update
 To build the app locally and serve it over HTTP:
 
 ```
-npm run serve
+npm start
 ```
 
 ## Build
