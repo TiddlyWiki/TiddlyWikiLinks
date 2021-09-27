@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Collecting TiddlyWiki Links",
   "dependencies": {
-    "node-fetch": "^2.6.1",
-    "normalize-url": "^5.3.0",
+    "node-fetch": "^2.6.5",
+    "normalize-url": "^5.3.1",
     "tiddlywiki": "github:Jermolene/TiddlyWiki5"
   },
   "devDependencies": {},
