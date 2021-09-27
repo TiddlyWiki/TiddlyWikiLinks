@@ -3,14 +3,45 @@ TiddlyWiki Utilities
 */
 
 function extractTiddlersFromWikiFile(text) {
-	// Check if we've got a store area
+	var results = [];
+	// Check if we've got an old-style store area
 	const storeAreaMarkerRegExp = /<div id=["']?storeArea['"]?( style=["']?display:none;["']?)?>/gi,
-		match = storeAreaMarkerRegExp.exec(text);
-	if(match) {
+		storeAreaMatch = storeAreaMarkerRegExp.exec(text);
+	if(storeAreaMatch) {
 		// If so, it's either a classic TiddlyWiki file or an unencrypted TW5 file
-		return deserializeTiddlyWikiFile(text,storeAreaMarkerRegExp.lastIndex,!!match[1]);
+		results.push.apply(results,deserializeTiddlyWikiFile(text,storeAreaMarkerRegExp.lastIndex,!!storeAreaMatch[1]));
+	}
+	// Check for new-style store areas
+	var newStoreAreaMarkerRegExp = /<script class="tiddlywiki-tiddler-store" type="([^"]*)">/gi,
+		newStoreAreaMatch = newStoreAreaMarkerRegExp.exec(text),
+		haveHadNewStoreArea = !!newStoreAreaMatch;
+	while(newStoreAreaMatch) {
+		results.push.apply(results,deserializeNewStoreArea(text,newStoreAreaMarkerRegExp.lastIndex,newStoreAreaMatch[1]));
+		newStoreAreaMatch = newStoreAreaMarkerRegExp.exec(text);
+	}
+	// Return results
+	if(storeAreaMatch || haveHadNewStoreArea) {
+		return results;
 	} else {
 		return null;
+	}
+}
+
+function deserializeNewStoreArea(text,storeAreaEnd,type,fields) {
+	var endOfScriptRegExp = /<\/script>/gi;
+	endOfScriptRegExp.lastIndex = storeAreaEnd;
+	var match = endOfScriptRegExp.exec(text);
+	if(type === "application/json" && match) {
+		var scriptContent = text.substring(storeAreaEnd,match.index),
+			json = [];
+		try {
+			json = JSON.parse(scriptContent);
+		} catch(e) {
+			// Ignore errors
+		}
+		return json;
+	} else {
+		return [];
 	}
 }
 
