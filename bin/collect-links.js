@@ -113,6 +113,9 @@ class App {
 		let response, text;
 		try {
 			response = await fetch(url);
+			if(!response.ok) {
+				throw response;
+			}
 			text = await response.text();
 		} catch(e) {
 			return {error: e.toString()};
