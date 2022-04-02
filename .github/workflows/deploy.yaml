@@ -29,4 +29,4 @@ jobs:
           token: ${{ secrets.GITHUBPUSHTOKEN }}
           branch: main
           repository-name: 'TiddlyWiki/links.tiddlywiki.org-gh-pages'
-          folder: .
+          folder: dist
