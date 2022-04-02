@@ -28,5 +28,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-          repository-name: 'TiddlyWiki/links.tiddlywiki.org-gh-pages',
+          repository-name: 'TiddlyWiki/links.tiddlywiki.org-gh-pages'
           folder: .
