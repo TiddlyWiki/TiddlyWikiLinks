@@ -1,42 +1,17 @@
 title: $:/_Templates/Details/Link
 
-<!--
+<$let tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="yes">
+{{||$:/_Templates/Components/LinkPanel}}
+</$let>
 
-Render the details of a particular URL
-
-Parameters:
-
-    link-title: Title of a $:/tags/Link tiddler with the target URL
-    tv-path-to-root: Optional relative path to get to the root of the site
-
--->
-<$vars url={{{ [<link-title>get[url]] }}}>
-
-<h1>{{$:/_Templates/RichLink/Link}}</h1>
-
-Bookmarked under these topics:
-
-<ul class="tc-list-horizontal">
-<$vars sortFilter="[all[tiddlers+shadows]tag[$:/tags/Link]field:url<url>tag<currentTiddler>count[]]">
-<$list filter="[tag[$:/tags/Link]field:url<url>tags[]] -[[$:/tags/Link]] +[!sortsub:number<sortFilter>]" variable="topic">
-<li>
-<$vars count={{{ [tag[$:/tags/Link]field:url<url>tag<topic>count[]] }}}>
-{{$:/_Templates/RichLink/Topic}}
-</$vars>
-</li>
-</$list>
-</$vars>
-</ul>
-
-Bookmarked by <$count filter="[tag[$:/tags/Link]url<url>]"/> contributor(s):
+Bookmarked by <$count filter="[tag[$:/tags/Link]field:url{!!url}each[origin]] -[<currentTiddler>]"/> other contributor(s)
 
 <ul class="tc-list-vertical">
-<$list filter="[tag[$:/tags/Link]field:url<url>!sort[created]]" variable="link-title">
+<$list filter="[tag[$:/tags/Link]field:url{!!url}!sort[created]] -[<currentTiddler>]">
 <li>
-<$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="no">
-{{$:/_Templates/Components/LinkPanel}}
-</$vars>
+<$let tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="no">
+{{||$:/_Templates/Components/LinkPanel}}
+</$let>
 </li>
 </$list>
 </ul>
-</$vars>

@@ -1,34 +1,29 @@
 title: $:/_Templates/Details/Topic
 
-<!--
+<$let
+	topicTitle={{{ [<currentTiddler>tag[$:/tags/Topic]] :else[all[shadows+tiddlers]tag[$:/tags/Topic]field:topic<currentTiddler>] }}}
+	topicName={{{ [<topicTitle>get[topic]] }}}
+>
 
-Render the details of a particular Topic
-
-Parameters:
-
-    topic: Name of the topic
-    tv-path-to-root: Optional relative path to get to the root of the site
-
--->
-<h1><$vars count={{{ [tag[$:/tags/Link]tag<topic>count[]] }}}>{{$:/_Templates/RichLink/Topic}}</$vars></h1>
+<h1><$vars count={{{ [tag[$:/tags/Link]tag<topicName>count[]] }}}>{{||$:/_Templates/RichLink/Topic}}</$vars></h1>
 
 Links in this topic:
 
+<$let topic={{!!topic}}>
 <ul class="tc-list-vertical">
-<$list filter="[tag[$:/tags/Link]tag<topic>each[url]sort[url]]" variable="link-title">
-<$set name="url" value={{{ [<link-title>get[url]] }}}>
+<$list filter="[tag[$:/tags/Link]tag<topicName>each[url]sort[url]]">
 <li>
-<h2>{{$:/_Templates/RichLink/Link}}</h2>
+<h2>{{||$:/_Templates/RichLink/Link}}</h2>
 <ul class="tc-list-vertical">
-<$list filter="[tag[$:/tags/Link]tag<topic>url<url>!sort[modified]]" variable="link-title">
+<$list filter="[tag[$:/tags/Link]tag<topicName>field:url{!!url}!sort[modified]]">
 <li>
 <$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="no">
-{{$:/_Templates/Components/LinkPanel}}
+{{||$:/_Templates/Components/LinkPanel}}
 </$vars>
 </li>
 </$list>
 </ul>
 </li>
-</$set>
 </$list>
 </ul>
+</$let>

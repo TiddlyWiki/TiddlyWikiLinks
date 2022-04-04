@@ -1,0 +1,9 @@
+title: $:/_ViewTemplateBodyCascade
+tags: $:/tags/ViewTemplateBodyFilter
+code-body: yes
+list-before:
+
+[tag[$:/tags/Link]then[$:/_Templates/Details/Link]]
+:else[tag[$:/tags/Topic]then[$:/_Templates/Details/Topic]]
+:else[tag[$:/tags/Contributor]then[$:/_Templates/Details/Contributor]]
+:else[tag[$:/tags/AvataXXXXXXr]then[$:/_Templates/Details/Avatar]]

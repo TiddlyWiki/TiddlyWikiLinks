@@ -1,7 +1,0 @@
-title: $:/_Templates/Section/Search
-tags: $:/tags/PageSection
-
-<aside class="tc-section-search">
-<input id="tid-page-search-input" type="search" placeholder="Search..."/>
-<div id="tid-page-search-output" hidden></div>
-</aside>

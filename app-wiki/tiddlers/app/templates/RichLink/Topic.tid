@@ -1,26 +1,20 @@
 title: $:/_Templates/RichLink/Topic
 
 \whitespace trim
-<!--
-
-Render a rich link to the details page relating to a particular topic
-
-Parameters:
-
-    topic: Name of the topic
-    count: optional count to be displayed
-    tv-path-to-root: Optional relative path to get to the root of the site
-
--->
+<$let
+	topicTitle={{{ [<currentTiddler>tag[$:/tags/Topic]] :else[all[shadows+tiddlers]tag[$:/tags/Topic]field:topic<currentTiddler>] }}}
+	topicName={{{ [<topicTitle>get[topic]] }}}
+>
 <div class="tc-richlink tc-richlink-topic">
-<a href={{{ [<topic>slugify[]addprefix[topics/]addprefix<tv-path-to-root>] }}}>
+<$link to=<<topicTitle>>>
 <span class="tc-richlink-topic-name">
-<$text text=<<topic>>/>
+<$text text=<<topicName>>/>
 </span>
-<$list filter="[<count>!match[]]" variable="none">
+<$list filter="[<count>!match[]]" variable="ignore">
 <span class="tc-richlink-topic-count">
 <$text text=<<count>>/>
 </span>
 </$list>
-</a>
+</$link>
 </div>
+</$let>

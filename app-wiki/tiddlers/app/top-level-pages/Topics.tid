@@ -1,13 +1,12 @@
 title: Topics
-tags: $:/tags/Page
 
-Number of <a href={{{ [[./pages/topics]addprefix<tv-path-to-root>] }}}>topics</a>: <$count filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]"/>
+Number of topics: <$count filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]]"/>
 
 <ul class="tc-list-horizontal">
-<$list filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]] +[sort[]]" variable="topic">
+<$list filter="[tag[$:/tags/Link]tags[]] -[[$:/tags/Link]] +[sort[]]">
 <li>
-<$vars count={{{ [tag[$:/tags/Link]tag<topic>count[]] }}}>
-{{$:/_Templates/RichLink/Topic}}
+<$vars count={{{ [tag[$:/tags/Link]tag<currentTiddler>count[]] }}}>
+{{||$:/_Templates/RichLink/Topic}}
 </$vars>
 </li>
 </$list>

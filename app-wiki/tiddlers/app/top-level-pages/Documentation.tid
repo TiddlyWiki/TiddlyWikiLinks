@@ -1,0 +1,20 @@
+title: Documentation
+
+!! Introduction
+
+The source code for the TiddlyWiki Links Aggregator is on GitHub: https://github.com/TiddlyWikiLinks/TiddlyWikiLinks
+
+The Links Aggregator consists of three components:
+
+* ''./bin/collect-links.js'' - A standalone JavaScript application that downloads the contributor tiddlers from their respective wikis and transforms them into the data model described below
+* ''./app-wiki/'' - A TiddlyWiki application for interacting with the contributor tiddlers
+* ''./.github/workflows/deploy.yaml'' - GitHub Actions scripts to collect the contributor tiddlers, insert them into the TiddlyWiki application and publish the result via GitHub pages
+
+!! Data Model
+
+See [[Contributing]] for a discussion of the data model that contributing wikis must use. This section describes the data model used within this wiki.
+
+* <<tag $:/tags/Link>> - a description of a link provided by a contributor
+* <<tag $:/tags/Contributor>> - a contributor
+* <<tag $:/tags/Topic>> - a topic
+* <<tag $:/tags/Avatar>> - the avator of a contibutor

@@ -1,256 +1,9 @@
 title: $:/_Styles
+tags: $:/tags/Stylesheet
 
 \import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
-/*
-** Start with the normalize CSS reset, and then belay some of its effects
-*/
-
-{{$:/themes/tiddlywiki/vanilla/reset}}
-
-*, input[type="search"] {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-input[type="search"] {
-  outline-offset: initial;
-}
-
-/*
-** Basic element styles
-*/
-
-html, body {
-	font-family: {{$:/themes/tiddlywiki/vanilla/settings/fontfamily}};
-	text-rendering: optimizeLegibility; /* Enables kerning and ligatures etc. */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-html:-webkit-full-screen {
-	background-color: <<colour page-background>>;
-}
-
-body.tc-body {
-	font-size: 16px;
-	line-height: 1.4;
-	word-wrap: break-word;
-	color: <<colour foreground>>;
-	background-color: <<colour page-background>>;
-	fill: <<colour foreground>>;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-	font-size: 2em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	line-height: 1.2;
-	font-weight: bold;
-}
-
-pre {
-	display: block;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	word-break: normal;
-	word-wrap: break-word;
-	white-space: {{$:/themes/tiddlywiki/vanilla/options/codewrapping}};
-	background-color: <<colour pre-background>>;
-	border: 1px solid <<colour pre-border>>;
-	padding: 0 3px 2px;
-	border-radius: 3px;
-	font-family: {{$:/themes/tiddlywiki/vanilla/settings/codefontfamily}};
-}
-
-code {
-	color: <<colour code-foreground>>;
-	background-color: <<colour code-background>>;
-	border: 1px solid <<colour code-border>>;
-	white-space: {{$:/themes/tiddlywiki/vanilla/options/codewrapping}};
-	padding: 0 3px 2px;
-	border-radius: 3px;
-	font-family: {{$:/themes/tiddlywiki/vanilla/settings/codefontfamily}};
-}
-
-blockquote {
-	border-left: 5px solid <<colour blockquote-bar>>;
-	margin-left: 25px;
-	padding-left: 10px;
-	quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote > div {
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-
-dl dt {
-	font-weight: bold;
-	margin-top: 6px;
-}
-
-button, textarea, input, select {
-	outline-color: <<colour primary>>;
-}
-
-textarea,
-input[type=text],
-input[type=search],
-input[type=""],
-input:not([type]) {
-	color: <<colour foreground>>;
-	background: <<colour background>>;
-}
-
-input[type="checkbox"] {
-  vertical-align: middle;
-}
-
-kbd {
-	display: inline-block;
-	padding: 3px 5px;
-	font-size: 0.8em;
-	line-height: 1.2;
-	color: <<colour foreground>>;
-	vertical-align: middle;
-	background-color: <<colour background>>;
-	border: solid 1px <<colour muted-foreground>>;
-	border-bottom-color: <<colour muted-foreground>>;
-	border-radius: 3px;
-	box-shadow: inset 0 -1px 0 <<colour muted-foreground>>;
-}
-
-::selection {
-	background-color: Highlight;
-	color: HighlightText;
-	background-color: <<colour selection-background>>;
-	color: <<colour selection-foreground>>;
-}
-
-/*
-Markdown likes putting code elements inside pre elements
-*/
-pre > code {
-	padding: 0;
-	border: none;
-	background-color: inherit;
-	color: inherit;
-}
-
-table {
-	border: 1px solid <<colour table-border>>;
-	width: auto;
-	max-width: 100%;
-	caption-side: bottom;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	/* next 2 elements needed, since normalize 8.0.1 */
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-table th, table td {
-	padding: 0 7px 0 7px;
-	border-top: 1px solid <<colour table-border>>;
-	border-left: 1px solid <<colour table-border>>;
-}
-
-table thead tr td, table th {
-	background-color: <<colour table-header-background>>;
-	font-weight: bold;
-}
-
-table tfoot tr td {
-	background-color: <<colour table-footer-background>>;
-}
-
-/*
-Page Layout
-*/
-
-.tc-page-wrapper {
-	background-color: <<colour base-tertiary>>;
-}
-
-@media (min-width: 760px) {
-	.tc-page-wrapper {
-		width: 660px;
-		margin: 0 auto;
-	}
-}
-@media (max-width: 760px) {
-	.tc-page-wrapper {
-		margin: 0 0;
-	}
-}
-
-.tc-section-branding {
-	padding: 3em 1em 0 1em;
-	background-color: <<colour base-primary>>;
-}
-
-.tc-section-branding img {
-	vertical-align: text-bottom;
-}
-
-.tc-section-branding a {
-	text-decoration: none;
-	color: <<colour background>>;
-}
-
-.tc-section-branding-text {
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.tc-section-menu {
-	padding-top: 1em;
-}
-
-.tc-section-menu > ul {
-	list-style: none;
-	margin: 0;
-	padding: 0 0 0 0.5em;
-}
-
-.tc-section-menu > ul > li {
-	display: inline;
-}
-
-.tc-menu-item {
-	display: inline-block;
-	padding: 0.25em;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.tc-menu-item-selected {
-	background: white;
-}
-
-.tc-section-menu a {
-}
-
-.tc-section-content {
-	padding: 1em;
-	background-color: <<colour background>>;
-}
-
-.tc-section-footer {
-	padding: 1em;
-	color: <<colour background>>;
-	background-color: <<colour base-tertiary>>;
-	border-top: 0.5em solid <<colour base-primary>>;
-}
 
 /*
 Rich links
@@ -304,6 +57,7 @@ tc-richlink-contributor-name {
 .tc-richlink-topic {
 	display: inline-block;
 	font-size: 0.8em;
+	line-height: 1.2;
 }
 
 .tc-richlink-topic a {
@@ -312,8 +66,8 @@ tc-richlink-contributor-name {
 	margin: 0.5em;
 	border-radius: 1em;
 	text-decoration: none;
-	background-color: <<colour base-secondary>>;
-	color: <<colour background>>;
+	background-color: <<colour tag-background>>;
+	color: <<colour tag-foreground>>;
 	font-weight: bold;
 }
 
@@ -328,7 +82,7 @@ tc-richlink-contributor-name {
     padding: 0 0.25em;
 	border-radius: 1em;
 	background: <<color background>>;
-	color: <<colour base-secondary>>;
+	color: <<colour foreground>>;
 	margin: 0 0.25em 0 0.5em;
 	vertical-align: text-bottom;
 }
@@ -338,7 +92,7 @@ Details
 */
 
 .tc-contributor-info {
-	border: 1px solid <<colour base-primary>>;
+	border: 1px solid <<colour primary>>;
 	border-radius: 0.25em;
 	background-color: #fff8f8;
 	padding: 1em;
@@ -369,7 +123,7 @@ Details
 }
 
 .tc-link-panel > .tc-link-panel-heading {
-	background-color: <<colour muted-foreground>>;
+	background-color: <<colour page-background>>;
 	line-height: 1.7;
 	padding-left: 0.5em;
 }
@@ -378,10 +132,18 @@ Details
 	font-size: 0.8em;
 }
 
-.tc-link-panel > .tc-link-panel-body {
-	padding: 0.5em;
+.tc-link-panel > .tc-link-panel-topics {
+	background: #fff8f8;
 }
 
+.tc-link-panel > .tc-link-panel-topics .tc-list-horizontal {
+	margin: 0;
+}
+
+.tc-link-panel > .tc-link-panel-body {
+	background: #fff;
+	padding: 0.5em;
+}
 /*
 Search
 */

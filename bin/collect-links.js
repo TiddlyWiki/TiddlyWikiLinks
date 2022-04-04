@@ -35,8 +35,8 @@ class App {
 			outputTiddlersPath = this.args.byName["output-tiddlers"][0];
 		// Retrieve and parse the bill of materials
 		const sitesInfo = JSON.parse(await readFileAsync(sitesPath,"utf8"));
-		// Collect up the output tiddlers
-		const output = [];
+		// Collect up the output tiddlers and tags
+		const output = [], outputTags = Object.create(null);
 		// Go through each entry
 		for(const siteInfo of sitesInfo) {
 			console.log(siteInfo)
@@ -48,12 +48,12 @@ class App {
 			} else {
 				// Collect a tiddler with information about the source
 				var sourceDescriptionTiddler = {
-					title: `$:/config/sites/${siteInfo.name}`,
+					title: `Contributor: ${siteInfo.name}`,
 					name: siteInfo.name,
 					url: siteInfo.url,
 					caption: "",
 					text: "",
-					tags: "$:/tags/LinkSource"
+					tags: "$:/tags/Contributor"
 				};
 				// Get the tiddlers from the site
 				var tiddlers = extractTiddlersFromWikiFile(contents.text);
@@ -65,15 +65,20 @@ class App {
 					const tags = parseStringArray(fields.tags || "");
 					// Collect tiddlers with $:/tags/Link and an "url" field that looks like an http:// or https:// URL
 					if(tags.includes("$:/tags/Link") &&  fields.url && (fields.url.startsWith("https://") || fields.url.startsWith("http://"))) {
-						const normalizedUrl = normalizeUrl(fields.url);
+						const normalizedUrl = normalizeUrl(fields.url),
+							hashedNormalizedUrl = hash(normalizedUrl),
+							filteredTags = tags.map(tag => tag.trim()).filter(tag => tag === "$:/tags/Link" || !tag.startsWith("$:/"));
+						for(const tag of filteredTags) {
+							outputTags[tag] = true;
+						}
 						output.push({
-							title: `$:/config/links/${siteInfo.name}/${fields.title}`,
+							title: `Link from ${siteInfo.name}: ${hashedNormalizedUrl}`,
 							modified: fields.modified,
 							created: fields.created,
 							text: fields.text,
 							url: normalizedUrl,
-							"url-hash": hash(normalizedUrl),
-							tags: stringifyList(tags.map(tag => tag.trim()).filter(tag => tag === "$:/tags/Link" || !tag.startsWith("$:/"))),
+							"url-hash": hashedNormalizedUrl,
+							tags: stringifyList(filteredTags),
 							origin: siteInfo.name
 						})
 					}
@@ -98,6 +103,14 @@ class App {
 				// Output the source description tiddler
 				output.push(sourceDescriptionTiddler);
 			}
+		}
+		// Output the tags
+		for(const tag in outputTags) {
+			output.push({
+				title: `Topic: ${tag}`,
+				topic: tag,
+				tags: "$:/tags/Topic"
+			});
 		}
 		// Write the output tiddlers
 		await mkdirAsync(path.dirname(outputTiddlersPath),{recursive: true});

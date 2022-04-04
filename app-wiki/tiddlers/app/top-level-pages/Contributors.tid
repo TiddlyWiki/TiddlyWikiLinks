@@ -1,10 +1,9 @@
 title: Contributors
-tags: $:/tags/Page
 
-Number of contributors: <a href={{{ [[./pages/contributors]addprefix<tv-path-to-root>] }}}>contributors</a>: <$count filter="[tag[$:/tags/LinkSource]]"/>
+Number of contributors: <$count filter="[tag[$:/tags/Contributor]]"/>
 
 <ul class="tc-list-vertical">
-<$list filter="[tag[$:/tags/Link]each[origin]get[origin]sort[]]" variable="contributor">
-<li>{{$:/_Templates/RichLink/Contributor}} (<$count filter="[tag[$:/tags/Link]origin<contributor>]"/> links)</li>
+<$list filter="[tag[$:/tags/Contributor]sort[]]">
+<li>{{||$:/_Templates/RichLink/Contributor}} (<$count filter="[tag[$:/tags/Link]field:origin{!!name}]"/> links)</li>
 </$list>
 </ul>

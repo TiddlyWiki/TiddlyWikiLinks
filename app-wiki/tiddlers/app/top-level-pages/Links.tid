@@ -1,14 +1,11 @@
 title: Links
-tags: $:/tags/Page
 
-Number of <a href={{{ [[./pages/links]addprefix<tv-path-to-root>] }}}>links</a>: <$count filter="[tag[$:/tags/Link]]"/>
+Number of links: <$count filter="[tag[$:/tags/Link]]"/>
 
-Number of unique <a href={{{ [[./pages/links]addprefix<tv-path-to-root>] }}}>URLs</a>: <$count filter="[tag[$:/tags/Link]each[url]]"/>
+Number of unique URLs: <$count filter="[tag[$:/tags/Link]each[url]]"/>
 
 <ul class="tc-list-vertical">
-<$list filter="[tag[$:/tags/Link]each[url]sort[url]]" variable="link-title">
-<$set name="url" value={{{ [<link-title>get[url]] }}}>
-<li>{{$:/_Templates/RichLink/Link}} (<$count filter="[tag[$:/tags/Link]field:url<url>]"/> links)</li>
-</$set>
+<$list filter="[tag[$:/tags/Link]each[url]sort[url]]">
+<li>{{||$:/_Templates/RichLink/Link}} (<$count filter="[tag[$:/tags/Link]field:url{!!url}]"/> links)</li>
 </$list>
 </ul>

@@ -4,20 +4,32 @@ title: HelloThere
 
 This site is a collection of links to useful and interesting ~TiddlyWiki material curated by our team of community editors.
 
-''NEW'': You can now download links as .tid files to add to your own bookmarking files
+!! Sections
+
+* [[Links]]
+* [[Contributors]]
+* [[Topics]]
+* [[About]]
+* [[Documentation]]
+
+Last update: <$text text={{{ [tag[$:/tags/Link]!sort[modified]get[modified]limit[1]format:date{$:/language/Tiddler/DateFormat}] }}}/>
+
+Also available as <a href="./tiddlers.json" download="tiddlers.json">raw tiddlers in a JSON file</a>.
+
+Join the development of [[TiddlyWikiLinks on GitHub|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks]]
 
 !! Recent Updates
 
 The most recently updated links.
 
 <$vars subfilter="[tag[$:/tags/Link]]">
-<$list filter="[subfilter<subfilter>has[modified]!sort[modified]limit[100]eachday[modified]]">
+<$list filter="[subfilter<subfilter>has[modified]!sort[modified]limit[10]eachday[modified]]">
 <h3><$view field="modified" format="date" template="DDth MMM YYYY"/></h3>
 <ul class="tc-list-vertical">
 <$list filter="[sameday:modified{!!modified}subfilter<subfilter>!sort[modified]]">
 <li>
-<$vars link-title=<<currentTiddler>> tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="yes">
-{{$:/_Templates/Components/LinkPanel}}
+<$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="yes">
+{{||$:/_Templates/Components/LinkPanel}}
 </$vars>
 </li>
 </$list>

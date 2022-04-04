@@ -1,18 +1,8 @@
 title: $:/_Templates/RichLink/Contributor
 
-<!--
-
-Render a rich link to the details page relating to a particular contributor
-
-Parameters:
-
-    contributor: Name of the contributor
-    tv-path-to-root: Optional relative path to get to the root of the site
-
--->
 <div class="tc-richlink tc-richlink-contributor">
-<a href={{{ [<contributor>addprefix[contributors/]addprefix<tv-path-to-root>] }}}>
-<$image source={{{ [<contributor>addprefix[$:/config/avatars/]] }}} width=32px height=32px/>
-<span class="tc-richlink-contributor-name"><$text text=<<contributor>>/></span>
-</a>
+<$link>
+<$image source={{{ [tag[$:/tags/Avatar]field:name{!!name}] }}} width=32px height=32px/>
+<span class="tc-richlink-contributor-name"><$text text={{!!name}}/></span>
+</$link>
 </div>
