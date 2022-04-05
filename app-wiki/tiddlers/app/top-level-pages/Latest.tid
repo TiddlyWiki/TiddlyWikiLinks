@@ -1,0 +1,18 @@
+title: Latest
+
+The most recently updated links.
+
+<$vars subfilter="[tag[$:/tags/Link]]">
+<$list filter="[subfilter<subfilter>has[modified]!sort[modified]limit[10]eachday[modified]]">
+<h3><$view field="modified" format="date" template="DDth MMM YYYY"/></h3>
+<ul class="tc-list-vertical">
+<$list filter="[sameday:modified{!!modified}subfilter<subfilter>!sort[modified]]">
+<li>
+<$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="yes">
+{{||$:/_Templates/Components/LinkPanel}}
+</$vars>
+</li>
+</$list>
+</ul>
+</$list>
+</$vars>

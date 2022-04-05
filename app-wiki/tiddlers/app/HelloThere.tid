@@ -4,13 +4,14 @@ title: HelloThere
 
 This site is a collection of links to useful and interesting ~TiddlyWiki material curated by our team of community editors.
 
-!! Sections
+!! How This Site Works
 
-* [[Links]]
-* [[Contributors]]
-* [[Topics]]
-* [[About]]
-* [[Documentation]]
+This site aggregates links curated by individual members of the ~TiddlyWiki community. It lets you see the latest links, and explore them through categories and timelines.
+
+This site works best with a crowd of people posting links. The pressure on individuals is reduced because not everybody needs to catch every interesting link that flies past. The aggregation effects reduce the impact of mistakes. For example, if one person mis-tags a link under an inappropriate topic, the site will show that only one person added that tag, versus the majority using more appropriate tags. In that way, we hope that a sort of wisdom of the crowds will emerge, with consensus emerging as to the most useful ways to describe and categorise links.
+
+* [[How to contribute links to this site|Contributing]]
+* [[Find out how this site works|Documentation]]
 
 Last update: <$text text={{{ [tag[$:/tags/Link]!sort[modified]get[modified]limit[1]format:date{$:/language/Tiddler/DateFormat}] }}}/>
 
@@ -18,21 +19,4 @@ Also available as <a href="./tiddlers.json" download="tiddlers.json">raw tiddler
 
 Join the development of [[TiddlyWikiLinks on GitHub|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks]]
 
-!! Recent Updates
-
-The most recently updated links.
-
-<$vars subfilter="[tag[$:/tags/Link]]">
-<$list filter="[subfilter<subfilter>has[modified]!sort[modified]limit[10]eachday[modified]]">
-<h3><$view field="modified" format="date" template="DDth MMM YYYY"/></h3>
-<ul class="tc-list-vertical">
-<$list filter="[sameday:modified{!!modified}subfilter<subfilter>!sort[modified]]">
-<li>
-<$vars tv-linkpanel-show-contributor="yes" tv-linkpanel-show-url="yes">
-{{||$:/_Templates/Components/LinkPanel}}
-</$vars>
-</li>
-</$list>
-</ul>
-</$list>
-</$vars>
+<<tabs tabsList:"Latest Links Contributors Topics" default:"Latest">>
