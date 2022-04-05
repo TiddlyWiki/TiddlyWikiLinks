@@ -17,6 +17,6 @@ Last update: <$text text={{{ [tag[$:/tags/Link]!sort[modified]get[modified]limit
 
 Also available as <a href="./tiddlers.json" download="tiddlers.json">raw tiddlers in a JSON file</a>.
 
-Join the development of [[TiddlyWikiLinks on GitHub|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks]]
+Join the development of [[TiddlyWikiLinks on GitHub|https://github.com/TiddlyWiki/TiddlyWikiLinks]]
 
 <<tabs tabsList:"Latest Links Contributors Topics" default:"Latest">>

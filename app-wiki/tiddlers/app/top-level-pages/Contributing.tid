@@ -4,7 +4,7 @@ title: Contributing
 
 We invite you to become a contributing editor for ~TiddlyWikiLinks.
 
-The technical requirement is that you must maintain a publicly accessible ~TiddlyWiki containing the links. The URL of your site must be registered in the [[sites.json|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks/blob/main/sites/sites.json]] file in the ~GitHub repository. You can go ahead and add yourself if you know how to send a ~GitHub pull request, or you can post a message to the forum asking for somebody else to create the PR on your behalf. The information needed in [[sites.json|https://github.com/TiddlyWikiLinks/TiddlyWikiLinks/blob/main/sites/sites.json]] is:
+The technical requirement is that you must maintain a publicly accessible ~TiddlyWiki containing the links. The URL of your site must be registered in the [[sites.json|https://github.com/TiddlyWiki/TiddlyWikiLinks/blob/main/sites/sites.json]] file in the ~GitHub repository. You can go ahead and add yourself if you know how to send a ~GitHub pull request, or you can post a message to the forum asking for somebody else to create the PR on your behalf. The information needed in [[sites.json|https://github.com/TiddlyWiki/TiddlyWikiLinks/blob/main/sites/sites.json]] is:
 
 * Your username, which must be unique
 * The URL of your site
