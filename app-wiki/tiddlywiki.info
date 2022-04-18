@@ -1,6 +1,7 @@
 {
 	"description": "TiddlyWiki Links",
 	"plugins": [
+		"tiddlywiki/menubar",
 		"tiddlywiki/highlight"
 	],
 	"themes": [
