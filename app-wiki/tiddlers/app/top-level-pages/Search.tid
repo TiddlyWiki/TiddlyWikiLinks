@@ -1,0 +1,18 @@
+created: 20220420182241970
+modified: 20220421172845422
+tags: 
+title: Search
+
+Search -- based on sidebar entry.
+
+<$vars subfilter="[tag[$:/tags/Link]]" >
+<$list filter="[subfilter<subfilter>search:text{$:/temp/search}limit[10]]">
+<ul class="tc-list-vertical">
+<li>
+<$vars tv-linkpanel-show-contributor="no" tv-linkpanel-show-url="yes">
+{{||$:/_Templates/Components/LinkPanelSearch}}
+</$vars>
+</li>
+</ul>
+</$list>
+</$vars>
