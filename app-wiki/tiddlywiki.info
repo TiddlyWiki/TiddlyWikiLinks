@@ -18,5 +18,9 @@
 			"--save","$:/favicon.ico","favicon.ico",
 			"--render","$:/core/templates/exporters/JsonFile","tiddlers.json","text/plain","$:/core/templates/exporters/JsonFile",
 				"exportFilter","[tag[$:/tags/Link]] [tag[$:/tags/Avatar]] [tag[$:/tags/Contributor]]"]
+	},
+	"config": {
+		"default-tiddler-location": "./tiddlers/app/",
+		"retain-original-tiddler-path": true
 	}
 }

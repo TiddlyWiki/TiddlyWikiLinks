@@ -15,6 +15,7 @@
     "clean-output": "./bin/clean.sh",
     "collect-links": "node ./bin/collect-links.js",
     "build-dist": "npx tiddlywiki app-wiki --output dist --build index",
+    "edit": "npx tiddlywiki +plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb app-wiki --listen",
     "serve": "npx http-server ./dist",
     "test": "node bin/test.js"
   },
