@@ -1,0 +1,32 @@
+created: 20220420192043799
+modified: 20220421174148256
+tags: 
+title: $:/_Templates/Components/LinkPanelSearch
+
+<!--
+
+Render the details of a particular link
+
+Parameters:
+
+	tv-linkpanel-show-contributor: yes/no
+	tv-linkpanel-show-url: yes/no
+
+-->
+<$let splithere="^(.{1,30})(.*)"  linereturn="""
+"""
+pseudo={{{ [<currentTiddler>get[text]splitregexp<linereturn>search-replace:im:regexp<splithere>,[$1]] }}}
+>
+<div class="tc-link-panel">
+<div class="tc-link-panel-heading">
+<$list filter="[<tv-linkpanel-show-url>match[yes]]" variable="ignore">
+{{||$:/_Templates/RichTitle/Link}}
+</$list>
+</div>
+<div class="tc-link-panel-body">
+<$dynannotate search={{$:/temp/search}} searchDisplay="snippet">
+<$transclude mode="inline"/>
+</$dynannotate>
+</div>
+</div>
+</$let>
