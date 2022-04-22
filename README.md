@@ -23,6 +23,12 @@ To build the app locally and serve it over HTTP:
 npm start
 ```
 
+To edit tiddlers over HttP without downloading link tiddlers. You must have previously downloaded the link tiddlers via `npm start` or other command. A random port will be used if port 8080 is unavailable.
+
+```
+npm run edit
+```
+
 ## Build
 
 To build the app locally:
