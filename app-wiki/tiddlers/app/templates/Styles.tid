@@ -1,5 +1,8 @@
-title: $:/_Styles
+created: 20220423154207929
+modified: 20220423154335856
 tags: $:/tags/Stylesheet
+title: $:/_Styles
+type: text/vnd.tiddlywiki
 
 \import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
@@ -164,4 +167,8 @@ Search
 	padding: 0 1em 1em 1em;
 	border-radius: 0.5em;
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tc-link-search {
+width: 100% ;
 }
