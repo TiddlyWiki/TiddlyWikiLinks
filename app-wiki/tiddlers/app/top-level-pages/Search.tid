@@ -1,12 +1,16 @@
 created: 20220420182241970
-modified: 20220421172845422
+modified: 20220423154810657
 tags: 
 title: Search
+type: text/vnd.tiddlywiki
 
-Search -- based on sidebar entry.
+Search -- same as sidebar search.
 
+<$edit-text tiddler="$:/temp/search" field="text" tag="input" class="tc-link-search"/> 
+
+<$vars limit={{{ [{$:/temp/search}length[]compare:integer:lt[3]then[5]else[100]] }}}>
 <$vars subfilter="[tag[$:/tags/Link]]" >
-<$list filter="[subfilter<subfilter>search:text{$:/temp/search}limit[10]]">
+<$list filter="[subfilter<subfilter>search:text{$:/temp/search}limit<limit>]">
 <ul class="tc-list-vertical">
 <li>
 <$vars tv-linkpanel-show-contributor="no" tv-linkpanel-show-url="yes">
@@ -15,4 +19,5 @@ Search -- based on sidebar entry.
 </li>
 </ul>
 </$list>
+</$vars>
 </$vars>
