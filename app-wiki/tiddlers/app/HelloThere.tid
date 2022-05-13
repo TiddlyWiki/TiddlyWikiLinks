@@ -1,24 +1,10 @@
 created: 20220420182318455
-modified: 20220420183055824
+modified: 20220513191445344
 title: HelloThere
+type: text/vnd.tiddlywiki
 
 !! Welcome to the ~TiddlyWiki Links Aggregator
 
-This site is a collection of links to useful and interesting ~TiddlyWiki material curated by our team of community editors.
+Learn more about this project and how you can participate by clicking on the `About` tab below
 
-!! How This Site Works
-
-This site aggregates links curated by individual members of the ~TiddlyWiki community. It lets you see the latest links, and explore them through categories and timelines.
-
-This site works best with a crowd of people posting links. The pressure on individuals is reduced because not everybody needs to catch every interesting link that flies past. The aggregation effects reduce the impact of mistakes. For example, if one person mis-tags a link under an inappropriate topic, the site will show that only one person added that tag, versus the majority using more appropriate tags. In that way, we hope that a sort of wisdom of the crowds will emerge, with consensus emerging as to the most useful ways to describe and categorise links.
-
-* [[How to contribute links to this site|Contributing]]
-* [[Find out how this site works|Documentation]]
-
-Last update: <$text text={{{ [tag[$:/tags/Link]!sort[modified]get[modified]limit[1]format:date{$:/language/Tiddler/DateFormat}] }}}/>
-
-Also available as <a href="./tiddlers.json" download="tiddlers.json">raw tiddlers in a JSON file</a>.
-
-Join the development of [[TiddlyWikiLinks on GitHub|https://github.com/TiddlyWiki/TiddlyWikiLinks]]
-
-<<tabs tabsList:"Latest Links Contributors Topics Search" default:"Latest">>
+<<tabs tabsList:"Search  Latest Links Contributors Topics About" default:"Search">>
