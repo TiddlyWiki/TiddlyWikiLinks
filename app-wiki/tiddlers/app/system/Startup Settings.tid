@@ -1,0 +1,7 @@
+created: 20220513192040502
+modified: 20220513192115216
+tags: $:/tags/StartupAction
+title: Startup Settings
+type: text/vnd.tiddlywiki
+
+<$action-setfield $tiddler="$:/state/sidebar" text=“no” />
