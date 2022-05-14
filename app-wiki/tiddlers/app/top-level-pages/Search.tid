@@ -1,10 +1,16 @@
 created: 20220420182241970
-modified: 20220423154810657
+modified: 20220514193211398
 tags: 
 title: Search
+title-type: original
 type: text/vnd.tiddlywiki
 
-Search -- same as sidebar search.
+<table class="tc-search-options"><tr>
+<td rowspan="2">''Display as title:'' </td><td>
+<$radio tiddler="Search" field="title-type" value="pseudo"> First characters.</$radio></td>
+<td>
+<$radio tiddler="Search" field="title-type" value="original"> Original title</$radio></td>
+</tr></table>
 
 <$edit-text tiddler="$:/temp/search" field="text" tag="input" class="tc-link-search"/> 
 
