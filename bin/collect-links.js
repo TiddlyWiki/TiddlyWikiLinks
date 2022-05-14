@@ -79,6 +79,7 @@ class App {
 							url: normalizedUrl,
 							"url-hash": hashedNormalizedUrl,
 							tags: stringifyList(filteredTags),
+							"original-title": fields.title, 
 							origin: siteInfo.name
 						})
 					}
