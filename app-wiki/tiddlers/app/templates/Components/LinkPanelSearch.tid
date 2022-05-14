@@ -1,7 +1,8 @@
 created: 20220420192043799
-modified: 20220421174148256
+modified: 20220514191013410
 tags: 
 title: $:/_Templates/Components/LinkPanelSearch
+type: text/vnd.tiddlywiki
 
 <!--
 
@@ -16,6 +17,7 @@ Parameters:
 <$let splithere="^(.{1,30})(.*)"  linereturn="""
 """
 pseudo={{{ [<currentTiddler>get[text]splitregexp<linereturn>search-replace:im:regexp<splithere>,[$1]] }}}
+workingTitle={{{ [{Search!!title-type}match[original]then{!!original-title}else<pseudo>] }}}
 >
 <div class="tc-link-panel">
 <div class="tc-link-panel-heading">
