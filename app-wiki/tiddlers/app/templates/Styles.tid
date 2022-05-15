@@ -1,5 +1,5 @@
 created: 20220423154207929
-modified: 20220514192653419
+modified: 20220515025027568
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
@@ -175,7 +175,4 @@ width: 100% ;
 
 table.tc-search-options td, table.tc-search-options {
 border: none; 
-}
-xtable.tc-search-options > td {
-vertical-align: middle;
 }
