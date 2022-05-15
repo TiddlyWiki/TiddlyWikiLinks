@@ -1,5 +1,5 @@
 created: 20220420192043799
-modified: 20220514191013410
+modified: 20220515184018920
 tags: 
 title: $:/_Templates/Components/LinkPanelSearch
 type: text/vnd.tiddlywiki
@@ -26,7 +26,9 @@ workingTitle={{{ [{Search!!title-type}match[original]then{!!original-title}else<
 </$list>
 </div>
 <div class="tc-link-panel-body">
-<$dynannotate search={{$:/temp/search}} searchDisplay="snippet">
+<$dynannotate search={{$:/temp/search}} searchDisplay="snippet" 
+searchMode={{Search!!search-mode}}
+>
 <$transclude mode="inline"/>
 </$dynannotate>
 </div>
