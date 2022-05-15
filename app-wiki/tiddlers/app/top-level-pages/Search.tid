@@ -1,22 +1,34 @@
 created: 20220420182241970
-modified: 20220515025043387
+modified: 20220515185808654
+search-mode: normal
 tags: 
 title: Search
 title-type: pseudo
 type: text/vnd.tiddlywiki
 
 <table class="tc-search-options"><tr>
-<td rowspan="2">''Display as title:'' </td><td>
+<td rowspan="1">''Display as title:'' </td><td>
 <$radio tiddler="Search" field="title-type" value="pseudo"> First characters.</$radio></td>
 <td>
 <$radio tiddler="Search" field="title-type" value="original"> Original title</$radio></td>
-</tr></table>
+</tr><tr>
+<td rowspan="1">''Search type:'' </td><td>
+<$radio tiddler="Search" field="search-mode" value="normal"> Normal search</$radio></td>
+<td>
+<$radio tiddler="Search" field="search-mode" value="regexp"> Regular Exp.</$radio></td>
+</tr>
+</table>
 
 <$edit-text tiddler="$:/temp/search" field="text" tag="input" class="tc-link-search"/> 
 
 <$vars limit={{{ [{$:/temp/search}length[]compare:integer:lt[3]then[5]else[100]] }}}>
-<$vars subfilter="[tag[$:/tags/Link]]" >
-<$list filter="[subfilter<subfilter>search:text{$:/temp/search}limit<limit>]">
+<$let
+subfilter="[tag[$:/tags/Link]]" 
+searchNormal="[search:text{$:/temp/search}]"
+searchRegexp="[regexp:text{$:/temp/search}]"
+searchFilter= {{{ [{Search!!search-mode}match[normal]then<searchNormal>else<searchRegexp>] }}}
+>
+<$list filter="[subfilter<subfilter>subfilter<searchFilter>limit<limit>]">
 <ul class="tc-list-vertical">
 <li>
 <$vars tv-linkpanel-show-contributor="no" tv-linkpanel-show-url="yes">
@@ -25,5 +37,5 @@ type: text/vnd.tiddlywiki
 </li>
 </ul>
 </$list>
-</$vars>
+</$let>
 </$vars>
