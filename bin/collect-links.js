@@ -13,7 +13,27 @@ const fs = require("fs"),
 	fetch = require("node-fetch"),
 	normalizeUrl = require('normalize-url'),
 	{extractTiddlersFromWikiFile,parseStringArray,stringifyList} = require("./tiddlywiki-utils"),
-	{ArgParser,hash} = require("./utils");
+	{ArgParser,hash} = require("./utils"),
+	{ parse } = require('csv-parse');
+	
+/* Create Topics mapping */
+const topicsDict = {}
+
+fs.createReadStream('app-wiki/tiddlers/app/system/TopicsMap.txt')
+    .pipe(parse({
+        comment: '#',
+        trim: true,    
+    }))
+    .on('data', (data) => {
+        topicsDict[data[0]]=data[1] ;
+    })
+    .on('error',(err) => {
+        console.log(err)
+    })
+    .on('end', ()=> {
+        console.log("Done!")
+        console.log(topicsDict)
+    } );
 
 class App {
 
@@ -67,7 +87,11 @@ class App {
 					if(tags.includes("$:/tags/Link") &&  fields.url && (fields.url.startsWith("https://") || fields.url.startsWith("http://"))) {
 						const normalizedUrl = normalizeUrl(fields.url),
 							hashedNormalizedUrl = hash(normalizedUrl),
-							filteredTags = tags.map(tag => tag.trim()).filter(tag => tag === "$:/tags/Link" || !tag.startsWith("$:/"));
+							filteredTags = tags.map(tag => tag.trim()).filter(tag => tag === "$:/tags/Link" || !tag.startsWith("$:/"))
+							.map( tag => {if( tag in topicsDict ) { return topicsDict[tag] } else {
+								return tag ; 
+								}}
+							  );
 						for(const tag of filteredTags) {
 							outputTags[tag] = true;
 						}
