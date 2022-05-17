@@ -1,11 +1,124 @@
 # "old topic", "mapped topic"
+AWS, Amazon
+Advanced-Search,"Advanced Search"
+ColorPalettes, ColorPalette
+Color, Colour
+Blog, "Blog Post"
+DataExchange,"Data Exchange"
+Date,"Dates and Time" 
+Dates-and-Time,"Dates and Time"
+DEPRECATED, Obsolete
+Deprecated, Obsolete
+Dev,Developer
+Development,Developer
+Diagrams, Diagraming
+Dropdowns, Dropdown
+Editions, Edition
+edition, Edition
+editor, Editor
+"Editor Stamps", Editor
+Editors, Editor
 "Example wiki", "Example"
 Examples, Example 
 examples, Example
+External, "External Files"
+files, Files
+Filters, Filter
+FilterOperators, "Filter Operators"
+HandyFilters, "Filter"
+forum, Forum
+hastags, Hashtags
+hashtags, Hashtags
+"how to", "How To"
+HowTo, "How To"
+"How to", "How To"
+Import, Importing
+Interface, Interfacing
+Journal, Journaling
+Journals, Journaling
+layout, Layout
+Lists, Listing
 MarkDown, Markdown
 markdown, Markdown
+MD, Markdown
+Mobile, "Mobile Tools"
+"Multi Column", "Multi-Columns"
+music, Music
 node.js, Node.js 
 nodejs, Node.js
+learning, Learning
+Making-Plugins, "Plugin Making"
+Maps, Mapping
+Math, Maths
+memorization, Memory
+Non-Modern, Obsolete
+Outline, Outliners
 plugin, Plugin
 Plugins, Plugin
 plugins, Plugin
+popup, Popup
+Popups, Popup
+ProjectManagement, "Project Management"
+navigation, Navigation
+"proof of concept","Proof of Concept"
+regexp, "Regular Expression" 
+regular expressions, "Regular Expression" 
+resource,Resource
+reveal, Reveal 
+Roam-Like, "Roam Research"
+Rougelike, "Rouge"
+Savers,Saving
+Script,Scripting
+Search, Searching
+search-replace, Searching
+Searching Tools, Searching
+security,Security
+server,Server
+Social-Media,"Social Media"
+Spreadsheet, Spreadsheets
+Static site,"Static Sites"
+static sites,"Static Sites"
+Static-Pages,"Static Sites"
+StaticSite,"Static Sites"
+syntax highlighting,"Syntax Highlighting"
+SyntaxHighlighting,"Syntax Highlighting"
+Tabs,Tabbing
+Table-of-Contents,"Table of Contents"
+TableOfContents,"Table of Contents"
+TagHierarchy,"Tagging"
+Tags,"Tagging"
+tags-linkStoryRiver,"Tagging"
+Task-Management,"Task-Management"
+"text editor","Editor"
+text manipulation,"Text Manipulation"
+Text-Manipulation,"Text Manipulation"
+Themes, Theme
+Tiddler-Creation,"Tiddler Creation"
+Tiddler-Management,"Tiddler Management"
+Tiddler-Manipulation,"Tiddler Manipulation"
+TiddlWikiClassic,"TiddlWiki Classic"
+Tiddlywiki Help,TiddlyWiki Help
+TiddlyWiki-Online,TiddlyWiki Online
+TiddlyWikiToolmap,TiddlyWiki Toolmap
+Timer, Time and Date
+To-Do,To Do
+TOC,"Table of Contents"
+ToDo,To Do
+TopMenu,Top Menu
+trello,Trello
+tutorial, Tutorial
+Tutorials, Tutorial
+TWClassic,TiddlWiki Classic
+Understanding-TiddlyWiki,Understanding TiddlyWiki
+upload, Upload
+usecases,Use Cases
+UsedbyST,Used by ST
+Userscript, Scripts
+vim, Vim
+Web-Hosting,Web Hosting
+Widgets,Widget
+Wikitex-Extensions,WikiText
+Wikitext,WikiText
+WordCounts,Word Counts
+workflows,Work Flows
+Writing-Paragraphs,Writing
