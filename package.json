@@ -17,7 +17,7 @@
     "collect-links": "node ./bin/collect-links.js",
     "build-dist": "npx tiddlywiki app-wiki --output dist --build index",
     "edit": "npx tiddlywiki +plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb app-wiki --listen port=0",
-    "serve": "npx http-server ./dist",
+    "serve": "npx http-server ./dist -c-1",
     "test": "node bin/test.js"
   },
   "author": "Jeremy Ruston",
