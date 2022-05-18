@@ -1,5 +1,5 @@
 created: 20220513191216286
-modified: 20220513191326211
+modified: 20220517233828350
 tags: 
 title: About
 type: text/vnd.tiddlywiki
@@ -14,6 +14,10 @@ This site works best with a crowd of people posting links. The pressure on indiv
 
 * [[How to contribute links to this site|Contributing]]
 * [[Find out how this site works|Documentation]]
+
+Some topics are combined and relabeled during the link import process. Read more here:
+
+* [[Topics Map Guidelines]]
 
 Last update: <$text text={{{ [tag[$:/tags/Link]!sort[modified]get[modified]limit[1]format:date{$:/language/Tiddler/DateFormat}] }}}/>
 

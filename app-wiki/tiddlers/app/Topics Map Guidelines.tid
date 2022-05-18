@@ -1,0 +1,31 @@
+created: 20220517231532213
+modified: 20220517233810657
+tags: 
+title: Topics Map Guidelines
+type: text/vnd.tiddlywiki
+
+The [[Topics Map]] is used during the links import process to convert the topics supplied by a dozen contributors into a somewhat more consistent set of Topics.
+
+These are some general guidelines to consider when entering items into the [[Topics Map]].
+
+* Prefer British terminology
+* Avoid camel case except for terms that always use camel case (e.g. "TiddlyWiki")
+* Avoid acronyms except when well known or common
+* Prefer title case (e.g. "War and Peace")
+* Prefer singular over plural for items that are a member of a group
+* Consider using -ing when the singular form doesn't make sense.
+
+These are just suggested guidelines for helping to create a unified and consistent set of Topics. Naturally, there will be times when it is useful to not follow the exact guidelines.
+
+!!! Structure of the [[Topics Map]] .
+
+* Comma delimited
+* First column is original term
+* Second column is translated term
+* Put quotes around any original or translated terms that contain commas
+* The hashtag symbol as the first character on a line denotes a comment
+* Please retain the comments on the first line as a reminder to anyone who doesn't see these guidelines.
+
+!!! Usage
+
+Any proposed changes to the [[Topics Map]] should made as a PR to https://github.com/TiddlyWiki/TiddlyWikiLinks
