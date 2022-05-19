@@ -1,124 +1,129 @@
 # "old topic", "mapped topic"
-AWS, Amazon
-Advanced-Search,"Advanced Search"
-ColorPalettes, ColorPalette
+Actionwidget,Widget
+Aliases,Alias
+Aws, Amazon
+Abc Notation,ABC Notation
+Advanced-search,Advanced Search
+Advanced-tools,Advanced Tools
+Blog, Blog Post
+Blogpost, Blogging
+Camelcase,CamelCase
+Cmdb,CMDB
+Code,Coding
+Colorpalettes, ColorPalette
+Colorpalette, ColorPalette
 Color, Colour
-Blog, "Blog Post"
-DataExchange,"Data Exchange"
-Date,"Dates and Time" 
-Dates-and-Time,"Dates and Time"
-DEPRECATED, Obsolete
+Controlpanel, Control Panel
+Cross-reference,Cross Reference
+Css, CSS
+Csv, CSV
+D&d, D&D
+Dataexchange,Data Exchange
+Date,Dates and Time 
+Dates-and-time,Dates and Time
 Deprecated, Obsolete
 Dev,Developer
 Development,Developer
 Diagrams, Diagraming
+Disused, Obsolete
 Dropdowns, Dropdown
+Editing Tool,Editing
+Export, Exporting
 Editions, Edition
-edition, Edition
-editor, Editor
-"Editor Stamps", Editor
+Editor Stamps, Editor
 Editors, Editor
-"Example wiki", "Example"
+Example Wiki, Example
 Examples, Example 
-examples, Example
-External, "External Files"
-files, Files
+External, Files
+External Files, Files
 Filters, Filter
-FilterOperators, "Filter Operators"
-HandyFilters, "Filter"
-forum, Forum
-hastags, Hashtags
-hashtags, Hashtags
-"how to", "How To"
-HowTo, "How To"
-"How to", "How To"
+Filteroperators, "Filter Operators"
+Gtd,GTD
+Handyfilters, "Filter"
+Hastags, Hashtags
+Howto, How To
 Import, Importing
 Interface, Interfacing
+Ides, IDEs
+Info-section,Info Section
+Isbn, ISBN
+Json, JSON
 Journal, Journaling
 Journals, Journaling
-layout, Layout
 Lists, Listing
-MarkDown, Markdown
-markdown, Markdown
-MD, Markdown
-Mobile, "Mobile Tools"
-"Multi Column", "Multi-Columns"
-music, Music
-node.js, Node.js 
-nodejs, Node.js
-learning, Learning
-Making-Plugins, "Plugin Making"
+Markdown, Markdown
+Md, Markdown
+Mobile, Mobile Tools
+Multi Column, Multi-Columns
+Making-plugins, "Plugin Making"
 Maps, Mapping
 Math, Maths
 memorization, Memory
-Non-Modern, Obsolete
+Non-modern, Obsolete
+Nodejs, Node.js
 Outline, Outliners
-plugin, Plugin
+Pdf,PDF
 Plugins, Plugin
-plugins, Plugin
-popup, Popup
 Popups, Popup
-ProjectManagement, "Project Management"
-navigation, Navigation
-"proof of concept","Proof of Concept"
-regexp, "Regular Expression" 
-regular expressions, "Regular Expression" 
-resource,Resource
-reveal, Reveal 
-Roam-Like, "Roam Research"
-Rougelike, "Rouge"
+Projectmanagement, Project Management
+Proof Of Concept, Proof of Concept
+Randomization, Randomisation
+Regexp, Regular Expression
+Regular Expressions, "Regular Expression" 
+Roamresearch, Roam Research
+Roam-like, Roam Research
+Rougelike, Rouge
+Rss,RSS
 Savers,Saving
+Screenplay-creation,Screenplay Creation
 Script,Scripting
 Search, Searching
-search-replace, Searching
+Search-replace, Searching
 Searching Tools, Searching
-security,Security
-server,Server
-Social-Media,"Social Media"
+Social-media,"Social Media"
 Spreadsheet, Spreadsheets
-Static site,"Static Sites"
-static sites,"Static Sites"
-Static-Pages,"Static Sites"
-StaticSite,"Static Sites"
-syntax highlighting,"Syntax Highlighting"
-SyntaxHighlighting,"Syntax Highlighting"
+Static Site,Static Sites
+Static-pages,Static Sites
+Staticsite,Static Sites
+Syntaxhighlighting,Syntax Highlighting
+Svg,SVG
 Tabs,Tabbing
-Table-of-Contents,"Table of Contents"
-TableOfContents,"Table of Contents"
-TagHierarchy,"Tagging"
-Tags,"Tagging"
-tags-linkStoryRiver,"Tagging"
-Task-Management,"Task-Management"
-"text editor","Editor"
-text manipulation,"Text Manipulation"
-Text-Manipulation,"Text Manipulation"
+Table-of-contents,Table of Contents
+Tableofcontents,Table of Contents
+Taghierarchy,"Tagging"
+Tags,Tagging
+Tags-linkstoryriver,Tagging
+Task-management,Task Management
+Text Editor,Editor
+Text-manipulation,"Text Manipulation"
 Themes, Theme
-Tiddler-Creation,"Tiddler Creation"
-Tiddler-Management,"Tiddler Management"
-Tiddler-Manipulation,"Tiddler Manipulation"
-TiddlWikiClassic,"TiddlWiki Classic"
+Tiddler-creation,"Tiddler Creation"
+Tiddler-management,"Tiddler Management"
+Tiddler-manipulation,"Tiddler Manipulation"
+Tiddlytalk, TiddlyTalk
+Tiddlwikiclassic,"TiddlWiki Classic"
 Tiddlywiki Help,TiddlyWiki Help
-TiddlyWiki-Online,TiddlyWiki Online
-TiddlyWikiToolmap,TiddlyWiki Toolmap
+Tiddlywiki-online,TiddlyWiki Online
+Tiddlywikitoolmap,TiddlyWiki Toolmap
 Timer, Time and Date
-To-Do,To Do
-TOC,"Table of Contents"
-ToDo,To Do
-TopMenu,Top Menu
-trello,Trello
-tutorial, Tutorial
+To-do,To Do
+Toc,"Table of Contents"
+Todo,To Do
+Topmenu,Top Menu
 Tutorials, Tutorial
-TWClassic,TiddlWiki Classic
-Understanding-TiddlyWiki,Understanding TiddlyWiki
-upload, Upload
-usecases,Use Cases
-UsedbyST,Used by ST
+Twclassic,TiddlWiki Classic
+Ui,UI
+Understanding-tiddlywiki,Understanding TiddlyWiki
+Usecases,Use Cases
+Usedbyst,Used by ST
 Userscript, Scripts
-vim, Vim
-Web-Hosting,Web Hosting
+Web-hosting,Web Hosting
 Widgets,Widget
-Wikitex-Extensions,WikiText
+Wikitex-extensions,WikiText
 Wikitext,WikiText
-WordCounts,Word Counts
-workflows,Work Flows
-Writing-Paragraphs,Writing
+Wip, WIP
+Wordcounts,Word Counts
+Workflows,Work Flows
+Writing-paragraphs,Writing
+Wysiwyg,WYSIWYG
+Xml,XML

@@ -9,9 +9,9 @@ The [[Topics Map]] is used during the links import process to convert the topics
 These are some general guidelines to consider when entering items into the [[Topics Map]].
 
 * Prefer British terminology
-* Avoid camel case except for terms that always use camel case (e.g. "TiddlyWiki")
+* Avoid camel case except for terms that always use camel case (e.g. "TiddlyWiki", "CamelCase")
 * Avoid acronyms except when well known or common
-* Prefer title case (e.g. "War and Peace")
+* Prefer title case for output (e.g. "War and Peace")
 * Prefer singular over plural for items that are a member of a group
 * Consider using -ing when the singular form doesn't make sense.
 
@@ -20,7 +20,7 @@ These are just suggested guidelines for helping to create a unified and consiste
 !!! Structure of the [[Topics Map]] .
 
 * Comma delimited
-* First column is original term
+* First column is original term converted to strict title case (e.g. "War And Peace")
 * Second column is translated term
 * Put quotes around any original or translated terms that contain commas
 * The hashtag symbol as the first character on a line denotes a comment
