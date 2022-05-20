@@ -88,6 +88,15 @@ class App {
 						const normalizedUrl = normalizeUrl(fields.url),
 							hashedNormalizedUrl = hash(normalizedUrl),
 							filteredTags = tags.map(tag => tag.trim()).filter(tag => tag === "$:/tags/Link" || !tag.startsWith("$:/"))
+							.map( tag => {
+								if(tag === "$:/tags/Link") return tag ;
+								return tag.replace(/\w\S*/g, txt => {
+									return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); ;
+									}
+							 
+								); 
+								
+							})
 							.map( tag => {if( tag in topicsDict ) { return topicsDict[tag] } else {
 								return tag ; 
 								}}
