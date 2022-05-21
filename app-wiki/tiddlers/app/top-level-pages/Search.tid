@@ -1,5 +1,5 @@
 created: 20220420182241970
-modified: 20220515185808654
+modified: 20220521182440667
 search-mode: normal
 tags: 
 title: Search
@@ -19,7 +19,9 @@ type: text/vnd.tiddlywiki
 </tr>
 </table>
 
-<$edit-text tiddler="$:/temp/search" field="text" tag="input" class="tc-link-search"/> 
+<div class="tc-link-search">
+<span>''Search:''</span><$edit-text tiddler="$:/temp/search" field="text" tag="input" xclass="tc-link-search"/> 
+</div>
 
 <$vars limit={{{ [{$:/temp/search}length[]compare:integer:lt[3]then[5]else[100]] }}}>
 <$let

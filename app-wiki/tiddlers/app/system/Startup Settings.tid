@@ -1,7 +1,8 @@
 created: 20220513192040502
-modified: 20220513192115216
+modified: 20220521183547930
 tags: $:/tags/StartupAction
 title: Startup Settings
 type: text/vnd.tiddlywiki
 
 <$action-setfield $tiddler="$:/state/sidebar" text=“no” />
+<$action-setfield $tiddler="$:/temp/search" text="cloud"/>
