@@ -1,5 +1,5 @@
 created: 20220423154207929
-modified: 20220515025027568
+modified: 20220521183312503
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
@@ -169,8 +169,17 @@ Search
 	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.tc-link-search {
-width: 100% ;
+div.tc-link-search {
+  display: flex;
+  align-items: flex-start;
+}
+div.tc-link-search input {
+  flex: 1; /*take all the available space*/
+  max-width: 25em ;
+}
+div.tc-link-search  span{
+padding-left: 7px;
+padding-right: 7px;
 }
 
 table.tc-search-options td, table.tc-search-options {
