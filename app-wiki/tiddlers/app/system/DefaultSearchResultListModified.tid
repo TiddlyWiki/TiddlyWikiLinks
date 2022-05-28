@@ -1,0 +1,33 @@
+caption: Orig. Title
+created: 20220528211517501
+first-search-filter: [!is[system]search:original-title<userInput>sort[original-title]limit[250]]
+modified: 20220528213902097
+second-search-filter: [!is[system]search:original-title,text<userInput>sort[original-title]limit[250]]
+tags: $:/tags/SearchResults
+title: $:/core/ui/DefaultSearchResultListModified
+type: text/vnd.tiddlywiki
+
+\define searchResultList()
+\whitespace trim
+//<small>{{$:/language/Search/Matches/Title}}</small>//
+
+<$list filter="[<userInput>minlength[1]]" variable="ignore">
+<$list filter={{{ [<configTiddler>get[first-search-filter]] }}}>
+<span class={{{[<currentTiddler>addsuffix[-primaryList]] -[<searchListState>get[text]] +[then[]else[tc-list-item-selected]] }}}>
+<$transclude tiddler="$:/core/ui/ListItemTemplateModified"/>
+</span>
+</$list>
+</$list>
+
+//<small>{{$:/language/Search/Matches/All}}</small>//
+
+<$list filter="[<userInput>minlength[1]]" variable="ignore">
+<$list filter={{{ [<configTiddler>get[second-search-filter]] }}}>
+<span class={{{[<currentTiddler>addsuffix[-secondaryList]] -[<searchListState>get[text]] +[then[]else[tc-list-item-selected]] }}}>
+<$transclude tiddler="$:/core/ui/ListItemTemplateModified"/>
+</span>
+</$list>
+</$list>
+
+\end
+<<searchResultList>>

@@ -1,0 +1,7 @@
+created: 20220528213416105
+modified: 20220528213608928
+tags: 
+title: $:/core/ui/ListItemTemplateModified
+type: text/vnd.tiddlywiki
+
+<div class="tc-menu-list-item"><$link><$view field="original-title"/></$link></div>
