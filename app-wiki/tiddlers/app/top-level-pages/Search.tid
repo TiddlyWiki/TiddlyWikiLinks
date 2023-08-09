@@ -1,5 +1,5 @@
 created: 20220420182241970
-modified: 20220521182440667
+modified: 20230809030023549
 search-mode: normal
 tags: 
 title: Search
@@ -26,8 +26,8 @@ type: text/vnd.tiddlywiki
 <$vars limit={{{ [{$:/temp/search}length[]compare:integer:lt[3]then[5]else[100]] }}}>
 <$let
 subfilter="[tag[$:/tags/Link]]" 
-searchNormal="[search:text{$:/temp/search}]"
-searchRegexp="[regexp:text{$:/temp/search}]"
+searchNormal="[search:text,original-title{$:/temp/search}]"
+searchRegexp="[regexp:text{$:/temp/search}][regexp:original-title{$:/temp/search}]"
 searchFilter= {{{ [{Search!!search-mode}match[normal]then<searchNormal>else<searchRegexp>] }}}
 >
 <$list filter="[subfilter<subfilter>subfilter<searchFilter>limit<limit>]">
