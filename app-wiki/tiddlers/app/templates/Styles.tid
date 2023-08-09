@@ -1,5 +1,5 @@
 created: 20220423154207929
-modified: 20230809174816117
+modified: 20230809180217272
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
@@ -157,14 +157,11 @@ Details
 }
 
 .tc-link-panel > .tc-link-panel-body {
-	background: #fff ;
+	background: #fff;
 	padding: 0.5em;
 }
 
 <<dynannotate-dark-styles>>
-
-/*  zzz */
-
 
 /*
 Search
