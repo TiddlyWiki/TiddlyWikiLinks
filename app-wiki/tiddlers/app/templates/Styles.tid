@@ -1,12 +1,25 @@
 created: 20220423154207929
-modified: 20220521183312503
+modified: 20230809174816117
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
 
 \import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
+\define dynannotate-dark-styles() 
+<$list filter="[{$:/palette}match[$:/palettes/CupertinoDark]]"> 
+.tc-link-panel > .tc-link-panel-body {
+	background: #3f638b  ;
+	padding: 0.5em;
+}
 
+.tc-dynannotate-snippet-context::selection {
+  	background-color: lightgray ;
+	color: black;
+} 
+
+</$list>
+\end
 
 /*
 Rich links
@@ -144,9 +157,15 @@ Details
 }
 
 .tc-link-panel > .tc-link-panel-body {
-	background: #fff;
+	background: #fff ;
 	padding: 0.5em;
 }
+
+<<dynannotate-dark-styles>>
+
+/*  zzz */
+
+
 /*
 Search
 */
@@ -184,4 +203,8 @@ padding-right: 7px;
 
 table.tc-search-options td, table.tc-search-options {
 border: none; 
+}
+
+.tc-dynannotate-snippet-highlight {
+color: black ;
 }
