@@ -1,5 +1,5 @@
 created: 20220423154207929
-modified: 20230809180217272
+modified: 20230809180543262
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
@@ -17,7 +17,9 @@ type: text/vnd.tiddlywiki
   	background-color: lightgray ;
 	color: black;
 } 
-
+.tc-dynannotate-snippet-highlight {
+color: black ;
+}
 </$list>
 \end
 
@@ -202,6 +204,3 @@ table.tc-search-options td, table.tc-search-options {
 border: none; 
 }
 
-.tc-dynannotate-snippet-highlight {
-color: black ;
-}
