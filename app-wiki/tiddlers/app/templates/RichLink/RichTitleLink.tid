@@ -1,10 +1,26 @@
 created: 20220421151132670
-modified: 20220514190910995
+modified: 20230812005730813
 title: $:/_Templates/RichTitle/Link
 type: text/vnd.tiddlywiki
 
-<div class="tc-richlink tc-richlink-link">
-<$link class="tc-richlink-link-info" title="Show link info"><$text text={{{[<workingTitle>addsuffix[...]]}}}/></$link> 
+<div class="tc-richlink tc-richlink-link ">
+<a href={{!!url}} target="_blank" rel="noopener noreferrer" class="tc-richlink-link-target" title={{!!url}}>{{$:/core/images/open-window}}</a>
+
+<a href={{!!url}} 
+   class="tc-richlink-link-info tc-tiddlylink tc-tiddlylink-resolves "  
+   target="_blank" rel="noopener noreferrer" 
+ ><$text text={{{[<workingTitle>addsuffix<tv-ellipsis>]}}}/></a> 
+
+<$link 
+  to=<<currentTiddler>>
+  class="tc-richlink-link-info " 
+  tooltip="Show link info">{{$:/core/images/info-button}}
+</$link> 
+
 (<$count filter="[url{!!url}]"/>)
-<a href={{!!url}} target="_blank" rel="noopener noreferrer" class="tc-richlink-link-target" title={{!!url}}>{{$:/core/images/open-window}}</a><a href={{{ [<download-link-template>encodeuricomponent[]addprefix[data:text/plain,]] }}} download={{{ [<link-title>get[url-hash]addprefix[link-]addsuffix[.tid]] }}} class="tc-richlink-link-download" title="Download this link as a tiddler to add to your own TiddlyWiki">{{$:/core/images/download-button}}</a>
+
+<div class="tc-tags-wrapper"><$list filter="[all[current]tags[]sort[title]]-$:/tags/Link" template="$:/core/ui/TagTemplate" storyview="pop"/></div>
+<div class="tc-subtitle">
+//Submitted by <$view field="origin"/> on <$view field="modified" format="date" template={{$:/language/Tiddler/DateFormat}}/>//
+</div>
 </div>
