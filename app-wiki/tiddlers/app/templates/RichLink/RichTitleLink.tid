@@ -1,5 +1,5 @@
 created: 20220421151132670
-modified: 20230812005730813
+modified: 20230813192731115
 title: $:/_Templates/RichTitle/Link
 type: text/vnd.tiddlywiki
 
@@ -19,7 +19,7 @@ type: text/vnd.tiddlywiki
 
 (<$count filter="[url{!!url}]"/>)
 
-<div class="tc-tags-wrapper"><$list filter="[all[current]tags[]sort[title]]-$:/tags/Link" template="$:/core/ui/TagTemplate" storyview="pop"/></div>
+<div class="tc-tags-wrapper"><$list filter="[all[current]tags[]sort[title]]-$:/tags/Link" template="$:/Links-TagTemplate" storyview="pop"/></div>
 <div class="tc-subtitle">
 //Submitted by <$view field="origin"/> on <$view field="modified" format="date" template={{$:/language/Tiddler/DateFormat}}/>//
 </div>

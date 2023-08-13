@@ -1,0 +1,34 @@
+created: 20230813003249302
+modified: 20230813192530457
+tags: 
+title: $:/macro-list-tagged-draggable-for-original-title
+type: text/vnd.tiddlywiki
+
+\define list-tagged-draggable(tag,subFilter,emptyMessage,itemTemplate,elementTag:"div",storyview:"")
+\whitespace trim
+<span class="tc-tagged-draggable-list">
+<$set name="tag" value=<<__tag__>>>
+<$list filter="[<__tag__>tagging[]$subFilter$]" emptyMessage=<<__emptyMessage__>> storyview=<<__storyview__>>>
+<$elementTag$ class="tc-menu-list-item">
+<$droppable actions="""<$macrocall $name="list-tagged-draggable-drop-actions" tag=<<__tag__>>/>""" enable=<<tv-enable-drag-and-drop>>>
+<$elementTag$ class="tc-droppable-placeholder"/>
+<$elementTag$>
+<$transclude tiddler="""$itemTemplate$""">
+<$link to={{!!title}}>
+<$view field="original-title"/>
+</$link>
+</$transclude>
+</$elementTag$>
+</$droppable>
+</$elementTag$>
+</$list>
+<$tiddler tiddler="">
+<$droppable actions="""<$macrocall $name="list-tagged-draggable-drop-actions" tag=<<__tag__>>/>""" enable=<<tv-enable-drag-and-drop>>>
+<$elementTag$ class="tc-droppable-placeholder"/>
+<$elementTag$ style="height:0.5em;">
+</$elementTag$>
+</$droppable>
+</$tiddler>
+</$set>
+</span>
+\end
