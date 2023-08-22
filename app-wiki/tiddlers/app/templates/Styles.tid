@@ -1,5 +1,5 @@
 created: 20220423154207929
-modified: 20230809180543262
+modified: 20230812003929766
 tags: $:/tags/Stylesheet
 title: $:/_Styles
 type: text/vnd.tiddlywiki
@@ -19,6 +19,11 @@ type: text/vnd.tiddlywiki
 } 
 .tc-dynannotate-snippet-highlight {
 color: black ;
+}
+
+a.tc-richlink-link-target:visited svg {
+  fill: lightgray;
+
 }
 </$list>
 \end
@@ -50,6 +55,11 @@ tc-richlink-contributor-name {
 .tc-richlink-link {
 	
 }
+
+.tc-richlink div.tc-tags-wrapper {
+	margin: 0 0 0 0 ;
+}
+
 
 .tc-richlink-link-info {
 	word-break: break-all;
