@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v4.1.1
         with:
           persist-credentials: false 
       - name: Install dependencies
@@ -30,9 +30,9 @@ jobs:
       - name: Build Site
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2.0.0
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./dist
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2.0.4
+        uses: actions/deploy-pages@v4.0.4
